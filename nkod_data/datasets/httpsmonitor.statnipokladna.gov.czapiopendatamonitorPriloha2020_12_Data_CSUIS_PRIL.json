@@ -1,0 +1,41 @@
+{
+  "uri": "https://data.gov.cz/zdroj/datové-sady/00006947/0540f7ce6e420b1124118c1a5cc96b30",
+  "keywords": [
+    "Notes to Financial Statements",
+    "Příloha",
+    "období 12/2020",
+    "period 12/2020"
+  ],
+  "themes": [
+    "http://publications.europa.eu/resource/authority/data-theme/ECON",
+    "http://publications.europa.eu/resource/authority/data-theme/GOVE"
+  ],
+  "applicableLegislation": [
+    "http://data.europa.eu/eli/dir/2019/1024/oj"
+  ],
+  "description": "Účetní výkazy: Příloha",
+  "accrualPeriodicity": "http://publications.europa.eu/resource/authority/frequency/NEVER",
+  "identifier": "https://monitor.statnipokladna.gov.cz/api/opendata/monitor/Priloha/2020_12_Data_CSUIS_PRIL",
+  "temporal": "https://data.gov.cz/zdroj/datové-sady/00006947/0540f7ce6e420b1124118c1a5cc96b30/časové-pokrytí",
+  "documentation": "https://data.mf.gov.cz/topics/monitor",
+  "publisher": "https://rpp-opendata.egon.gov.cz/odrpp/zdroj/orgán-veřejné-moci/00006947",
+  "spatial": "https://linked.cuzk.cz/resource/ruian/stat/1",
+  "title": "Notes to Financial Statements - period 12/2020",
+  "inSeries": "https://data.gov.cz/zdroj/datové-sady/00006947/247a76a4aeaaa197840ef8ae32db79f5",
+  "distributions": [
+    {
+      "uri": "https://data.gov.cz/zdroj/datové-sady/00006947/0540f7ce6e420b1124118c1a5cc96b30/distribuce/7e87d5fd90565b8ce7c0b34ec6b3a6e0",
+      "downloadURL": "https://monitor.statnipokladna.gov.cz/data/extrakty/csv/Priloha/2020_12_Data_CSUIS_PRIL.zip",
+      "accessURL": "https://monitor.statnipokladna.gov.cz/data/extrakty/csv/Priloha/2020_12_Data_CSUIS_PRIL.zip",
+      "format": "http://publications.europa.eu/resource/authority/file-type/CSV",
+      "mediaType": "http://www.iana.org/assignments/media-types/text/csv"
+    },
+    {
+      "uri": "https://data.gov.cz/zdroj/datové-sady/00006947/0540f7ce6e420b1124118c1a5cc96b30/distribuce/8a2323967ddba5994925f038832e76ff",
+      "accessURL": "https://monitor.statnipokladna.gov.cz/api/monitorws"
+    }
+  ],
+  "isHVD": false,
+  "harvested_at": "2025-07-22T14:01:55.824330",
+  "scraper_version": "2.1-HVD"
+}

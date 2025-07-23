@@ -1,0 +1,43 @@
+{
+  "uri": "https://data.gov.cz/zdroj/datové-sady/00006947/095ba5ff8ccae88d7cd5e01fc0258908",
+  "keywords": [
+    "Příloha",
+    "období 12/2021",
+    "period 12/2021",
+    "Městské části",
+    "Districts",
+    "Notes to financial statements"
+  ],
+  "themes": [
+    "http://publications.europa.eu/resource/authority/data-theme/ECON",
+    "http://publications.europa.eu/resource/authority/data-theme/GOVE"
+  ],
+  "applicableLegislation": [
+    "http://data.europa.eu/eli/dir/2019/1024/oj"
+  ],
+  "description": "Financial statements: Notes to financial statements districts",
+  "accrualPeriodicity": "http://publications.europa.eu/resource/authority/frequency/NEVER",
+  "identifier": "https://monitor.statnipokladna.gov.cz/api/opendata/monitor/PrilohaMC/2021_12_Data_CSUIS_PRILOHAMC",
+  "temporal": "https://data.gov.cz/zdroj/datové-sady/00006947/095ba5ff8ccae88d7cd5e01fc0258908/časové-pokrytí",
+  "documentation": "https://data.mf.gov.cz/topics/monitor",
+  "publisher": "https://rpp-opendata.egon.gov.cz/odrpp/zdroj/orgán-veřejné-moci/00006947",
+  "spatial": "https://linked.cuzk.cz/resource/ruian/stat/1",
+  "title": "Příloha - Městské části - období 12/2021",
+  "inSeries": "https://data.gov.cz/zdroj/datové-sady/00006947/adc2f7218144aed23a1e036efe8fdaa3",
+  "distributions": [
+    {
+      "uri": "https://data.gov.cz/zdroj/datové-sady/00006947/095ba5ff8ccae88d7cd5e01fc0258908/distribuce/6b37ecd8796e1bf7311a3a3435f9f4c9",
+      "downloadURL": "https://monitor.statnipokladna.gov.cz/data/extrakty/csv/PrilohaMC/2021_12_Data_CSUIS_PRILOHAMC.zip",
+      "accessURL": "https://monitor.statnipokladna.gov.cz/data/extrakty/csv/PrilohaMC/2021_12_Data_CSUIS_PRILOHAMC.zip",
+      "format": "http://publications.europa.eu/resource/authority/file-type/CSV",
+      "mediaType": "http://www.iana.org/assignments/media-types/text/csv"
+    },
+    {
+      "uri": "https://data.gov.cz/zdroj/datové-sady/00006947/095ba5ff8ccae88d7cd5e01fc0258908/distribuce/4abc4fca0b883ff22e203f857ec90b9f",
+      "accessURL": "https://monitor.statnipokladna.gov.cz/api/monitorws"
+    }
+  ],
+  "isHVD": false,
+  "harvested_at": "2025-07-22T14:01:57.305217",
+  "scraper_version": "2.1-HVD"
+}

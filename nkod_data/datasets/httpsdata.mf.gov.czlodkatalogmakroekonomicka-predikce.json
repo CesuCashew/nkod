@@ -1,0 +1,22 @@
+{
+  "uri": "https://data.gov.cz/zdroj/datové-sady/00006947/03e2566dcff1e6499250f41716198d78",
+  "keywords": [
+    "predikce"
+  ],
+  "themes": [
+    "http://publications.europa.eu/resource/authority/data-theme/ECON"
+  ],
+  "applicableLegislation": [
+    "http://data.europa.eu/eli/dir/2019/1024/oj"
+  ],
+  "description": "Soubor je zveřejňován spolu s Makroekonomickou predikcí České republiky. Obsahuje jednotlivé tabulky a grafy, jež se v dané predikci vyskytují. ",
+  "accrualPeriodicity": "http://publications.europa.eu/resource/authority/frequency/QUARTERLY",
+  "identifier": "https://data.mf.gov.cz/lod/katalog/makroekonomicka-predikce",
+  "publisher": "https://rpp-opendata.egon.gov.cz/odrpp/zdroj/orgán-veřejné-moci/00006947",
+  "spatial": "https://linked.cuzk.cz/resource/ruian/stat/1",
+  "title": "Makroekonomická predikce",
+  "distributions": [],
+  "isHVD": false,
+  "harvested_at": "2025-07-22T14:01:55.120060",
+  "scraper_version": "2.1-HVD"
+}

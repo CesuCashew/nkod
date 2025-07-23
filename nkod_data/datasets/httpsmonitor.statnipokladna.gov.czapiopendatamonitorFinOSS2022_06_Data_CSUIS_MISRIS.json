@@ -1,0 +1,45 @@
+{
+  "uri": "https://data.gov.cz/zdroj/datové-sady/00006947/0c27deccd0df1cc8b40432600fb7b96d",
+  "keywords": [
+    "OSS",
+    "FIN",
+    "FIN 1-12",
+    "FIN 1-12 OSS",
+    "FIN 1-12 OSS - Budget Fulfillment of CHAP and OSS",
+    "FIN 1-12 OSS - Plnění rozpočtu KAP a OSS",
+    "období 06/2022",
+    "period 06/2022"
+  ],
+  "themes": [
+    "http://publications.europa.eu/resource/authority/data-theme/ECON",
+    "http://publications.europa.eu/resource/authority/data-theme/GOVE"
+  ],
+  "applicableLegislation": [
+    "http://data.europa.eu/eli/dir/2019/1024/oj"
+  ],
+  "description": "V letech 2010 - 2014 byla data finančního výkazu pro hodnocení plnění rozpočtu kapitol, OSS a SF (SF jen do roku 2014) zasílána do IISSP správci jednotlivých kapitol. Od roku 2015 probíhá plnění hodnot systému Monitor v oblasti státního rozpočtu z modulu RISRE systému IISSP. Tato data plně nahrazují dříve používaná data z výkazu Fin 2-04 U. Od roku 2015 mají státní fondy vlastní výkaz - FIN 1-12 SF.",
+  "accrualPeriodicity": "http://publications.europa.eu/resource/authority/frequency/NEVER",
+  "identifier": "https://monitor.statnipokladna.gov.cz/api/opendata/monitor/FinOSS/2022_06_Data_CSUIS_MISRIS",
+  "temporal": "https://data.gov.cz/zdroj/datové-sady/00006947/0c27deccd0df1cc8b40432600fb7b96d/časové-pokrytí",
+  "documentation": "https://data.mf.gov.cz/topics/monitor",
+  "publisher": "https://rpp-opendata.egon.gov.cz/odrpp/zdroj/orgán-veřejné-moci/00006947",
+  "spatial": "https://linked.cuzk.cz/resource/ruian/stat/1",
+  "title": "FIN 1-12 OSS - Plnění rozpočtu KAP a OSS - období 06/2022",
+  "inSeries": "https://data.gov.cz/zdroj/datové-sady/00006947/ada16b496afd59c378b931427df0a7cb",
+  "distributions": [
+    {
+      "uri": "https://data.gov.cz/zdroj/datové-sady/00006947/0c27deccd0df1cc8b40432600fb7b96d/distribuce/8951440c4e631db64cb029117998ebe4",
+      "downloadURL": "https://monitor.statnipokladna.gov.cz/data/extrakty/csv/FinOSS/2022_06_Data_CSUIS_MISRIS.zip",
+      "accessURL": "https://monitor.statnipokladna.gov.cz/data/extrakty/csv/FinOSS/2022_06_Data_CSUIS_MISRIS.zip",
+      "format": "http://publications.europa.eu/resource/authority/file-type/CSV",
+      "mediaType": "http://www.iana.org/assignments/media-types/text/csv"
+    },
+    {
+      "uri": "https://data.gov.cz/zdroj/datové-sady/00006947/0c27deccd0df1cc8b40432600fb7b96d/distribuce/cc99f02eae5e400ddb1247179e026f6f",
+      "accessURL": "https://monitor.statnipokladna.gov.cz/api/monitorws"
+    }
+  ],
+  "isHVD": false,
+  "harvested_at": "2025-07-22T14:01:58.223908",
+  "scraper_version": "2.1-HVD"
+}

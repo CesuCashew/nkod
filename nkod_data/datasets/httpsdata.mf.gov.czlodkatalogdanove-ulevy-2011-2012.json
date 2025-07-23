@@ -1,0 +1,31 @@
+{
+  "uri": "https://data.gov.cz/zdroj/datové-sady/00006947/0d30aceb422c2ebe2c4eced6ce4a5fcb",
+  "keywords": [
+    "daně"
+  ],
+  "themes": [
+    "http://publications.europa.eu/resource/authority/data-theme/ECON"
+  ],
+  "applicableLegislation": [
+    "http://data.europa.eu/eli/dir/2019/1024/oj"
+  ],
+  "description": "Vyčíslení daňových úlev pro ČR za roky 2011 a 2012 u daně z příjmů fyzických osob, daně z příjmů právnických osob a daně z přidané hodnoty. Povinnost publikovat odhady vyplývá ze Směrnice 2011/85/EU.\r\nDaňové úlevy jsou v podstatě veškeré slevy na dani, odpočty, osvobození či jiná daňová zvýhodnění – tedy vše, co umožňuje subjektům snížit jejich daňovou povinnost. Jedná se o odhad statický - nejsou v něm zahrnuty možné reakce subjektů na změnu zdanění. Částky tak nelze chápat jako příjem, kterého by stát mohl dosáhnout v případě zrušení některé z daňových úlev.",
+  "accrualPeriodicity": "http://publications.europa.eu/resource/authority/frequency/NEVER",
+  "identifier": "https://data.mf.gov.cz/lod/katalog/danove-ulevy-2011-2012",
+  "publisher": "https://rpp-opendata.egon.gov.cz/odrpp/zdroj/orgán-veřejné-moci/00006947",
+  "spatial": "https://linked.cuzk.cz/resource/ruian/stat/1",
+  "title": "Daňové úlevy 2011-2012",
+  "distributions": [
+    {
+      "uri": "https://data.gov.cz/zdroj/datové-sady/00006947/0d30aceb422c2ebe2c4eced6ce4a5fcb/distribuce/c55844d0d5c493a44f0d4b56544a14f2",
+      "title": "Daňové úlevy",
+      "downloadURL": "https://data.mf.gov.cz/katalog/sites/default/files/Danove-ulevy.xlsx",
+      "accessURL": "https://data.mf.gov.cz/katalog/cs/file/79/download?token=3ADBgkGa",
+      "format": "http://publications.europa.eu/resource/authority/file-type/XLSX",
+      "mediaType": "http://www.iana.org/assignments/media-types/application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    }
+  ],
+  "isHVD": false,
+  "harvested_at": "2025-07-22T14:01:58.565705",
+  "scraper_version": "2.1-HVD"
+}

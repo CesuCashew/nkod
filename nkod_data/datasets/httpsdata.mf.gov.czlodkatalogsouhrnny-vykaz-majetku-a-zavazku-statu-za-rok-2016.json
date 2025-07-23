@@ -1,0 +1,33 @@
+{
+  "uri": "https://data.gov.cz/zdroj/datové-sady/00006947/0e4e4cb0ca930deef3adabef5186f11a",
+  "keywords": [
+    "výkazy"
+  ],
+  "themes": [
+    "http://publications.europa.eu/resource/authority/data-theme/GOVE"
+  ],
+  "applicableLegislation": [
+    "http://data.europa.eu/eli/dir/2019/1024/oj"
+  ],
+  "description": "",
+  "accrualPeriodicity": "http://publications.europa.eu/resource/authority/frequency/NEVER",
+  "identifier": "https://data.mf.gov.cz/lod/katalog/souhrnny-vykaz-majetku-a-zavazku-statu-za-rok-2016",
+  "documentation": "https://data.mf.gov.cz/topics/konsolidace",
+  "publisher": "https://rpp-opendata.egon.gov.cz/odrpp/zdroj/orgán-veřejné-moci/00006947",
+  "spatial": "https://linked.cuzk.cz/resource/ruian/stat/1",
+  "title": "Souhrnný výkaz majetku a závazků státu za rok 2016",
+  "inSeries": "https://data.gov.cz/zdroj/datové-sady/00006947/fd09b09ebe394454c13dc0690270010f",
+  "distributions": [
+    {
+      "uri": "https://data.gov.cz/zdroj/datové-sady/00006947/0e4e4cb0ca930deef3adabef5186f11a/distribuce/c92d373c2c711c63acd1e208b55e16c4",
+      "title": "Souhrnný výkaz majetku a závazků státu za rok 2016",
+      "downloadURL": "https://data.mf.gov.cz/katalog/sites/default/files/Souhrnny_vykaz_majetku_a_zavazku_statu_za_rok_2016_0.xlsx",
+      "accessURL": "https://data.mf.gov.cz/katalog/cs/file/1729/download?token=-ZXYZpj5",
+      "format": "http://publications.europa.eu/resource/authority/file-type/XLSX",
+      "mediaType": "http://www.iana.org/assignments/media-types/application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    }
+  ],
+  "isHVD": false,
+  "harvested_at": "2025-07-22T14:01:58.905130",
+  "scraper_version": "2.1-HVD"
+}

@@ -1,0 +1,38 @@
+{
+  "uri": "https://data.gov.cz/zdroj/datové-sady/00006599/841711772",
+  "keywords": [
+    "podpora",
+    "CEP",
+    "IS VaVaI",
+    "centrální evidence projektů",
+    "projekt",
+    "výzkum, experimentálni vývoj a inovace",
+    "zákon č. 130/2002 Sb."
+  ],
+  "themes": [
+    "http://publications.europa.eu/resource/authority/data-theme/TECH"
+  ],
+  "applicableLegislation": [
+    "http://data.europa.eu/eli/dir/2019/1024/oj"
+  ],
+  "description": "Datová sada obsahuje údaje o všech realizovaných projektech výzkumu, experimentálního vývoje a inovací evidovaných v Centrální evidenci projektů (CEP) v Informačním systému výzkumu, experimentálního vývoje a inovací (IS VaVaI).",
+  "accrualPeriodicity": "http://publications.europa.eu/resource/authority/frequency/ANNUAL",
+  "identifier": "https://data.gov.cz/zdroj/datové-sady/00006599/841711772",
+  "temporal": "https://data.gov.cz/zdroj/datové-sady/00006599/841711772/časové-pokrytí",
+  "contactPoint": "https://data.gov.cz/zdroj/datové-sady/00006599/841711772/kontaktní-bod",
+  "publisher": "https://rpp-opendata.egon.gov.cz/odrpp/zdroj/orgán-veřejné-moci/00006599",
+  "spatial": "https://linked.cuzk.cz/resource/ruian/stat/1",
+  "title": "Projekty výzkumu, experimentálního vývoje a inovací",
+  "distributions": [
+    {
+      "uri": "https://data.gov.cz/zdroj/datové-sady/00006599/841711772/distribuce/4b6a563a6042c2df77b722b37edc66de",
+      "downloadURL": "https://www.isvavai.cz/dokumenty/opendata/CEP-projekty.csv",
+      "accessURL": "https://www.isvavai.cz/dokumenty/opendata/CEP-projekty.csv",
+      "format": "http://publications.europa.eu/resource/authority/file-type/CSV",
+      "mediaType": "http://www.iana.org/assignments/media-types/text/csv"
+    }
+  ],
+  "isHVD": false,
+  "harvested_at": "2025-07-22T14:01:50.077616",
+  "scraper_version": "2.1-HVD"
+}

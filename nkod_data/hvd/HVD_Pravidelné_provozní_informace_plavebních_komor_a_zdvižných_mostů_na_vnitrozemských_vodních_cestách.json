@@ -1,0 +1,51 @@
+{
+  "uri": "https://data.gov.cz/zdroj/datové-sady/00003352/1467546079",
+  "keywords": [
+    "vnitrozemská vodní doprava",
+    "RIS",
+    "euris",
+    "inland waterway navigation",
+    "river information services",
+    "říční informační služby",
+    "facility files",
+    "lift bridges",
+    "locks",
+    "operating hours",
+    "operational contacts",
+    "operational information",
+    "plavební komory",
+    "provozní doby",
+    "provozní informace",
+    "provozní kontakty",
+    "zdvižné mosty"
+  ],
+  "themes": [
+    "http://eurovoc.europa.eu/4359",
+    "http://eurovoc.europa.eu/4515",
+    "http://eurovoc.europa.eu/4519",
+    "http://eurovoc.europa.eu/4735",
+    "http://publications.europa.eu/resource/authority/data-theme/TRAN"
+  ],
+  "applicableLegislation": [
+    "http://data.europa.eu/eli/dir/2019/1024/oj",
+    "http://data.europa.eu/eli/reg_impl/2023/138/oj"
+  ],
+  "description": "Provozními informacemi se rozumí základní informace o plavebních objektech, jejich provozních dobách a kontaktech. Provozní informace představují informační položky RIS dle § 4 vyhlášky č. 356/2009 Sb. o informacích zaznamenávaných v Říčních informačních službách. Vstupní formát se řídí standardem pro XML souborů provozních informací (angl. facility files) a je definován dle aktuální verze kódovací příručky pro vnitrozemské elektronické plavební mapy (Encoding Guide for Inland ENCs). Datové sady na EuRIS API obsahují i mezinárodní data partnerských států, které uplatňují zvolené typy služeb dle směrnice Evropského parlamentu a Rady 2005/44/ES o harmonizovaných říčních informačních službách (RIS) na vnitrozemských vodních cestách ve Společenství. Pro filtraci dat konkrétního objektu je nutné v EuRIS API zadat jeho tzv. ISRS kód. Aktuální seznam ISRS kódů pro ČR je uveden v tzv. RIS Indexu na stránce EuRIS portálu po zaškrtnutí filtrů \"Země: Česká republika\" a \"Funkce: Plavební komora, Zdvižný most\". Odkaz na seznam RIS Index je: https://www.eurisportal.eu/waterway/risindex ",
+  "accrualPeriodicity": "http://publications.europa.eu/resource/authority/frequency/ANNUAL",
+  "contactPoint": "https://data.gov.cz/zdroj/datové-sady/00003352/1467546079/kontaktní-bod",
+  "publisher": "https://rpp-opendata.egon.gov.cz/odrpp/zdroj/orgán-veřejné-moci/00003352",
+  "spatial": "http://publications.europa.eu/resource/authority/continent/EUROPE",
+  "title": "Pravidelné provozní informace plavebních komor a zdvižných mostů na vnitrozemských vodních cestách",
+  "hvdCategory": "http://data.europa.eu/bna/c_b79e35eb",
+  "distributions": [
+    {
+      "uri": "https://data.gov.cz/zdroj/datové-sady/00003352/1467546079/distribuce/6cc47cf2568b173461122da6227ba152",
+      "title": "EuRIS OperationTimes",
+      "accessURL": "https://www.eurisportal.eu/doc/api?urls.primaryName=OperationTimes_v1#/",
+      "applicableLegislation": "http://data.europa.eu/eli/reg_impl/2023/138/oj"
+    }
+  ],
+  "isHVD": true,
+  "harvested_at": "2025-07-23T10:09:53.312215",
+  "scraper_version": "2.1-HVD-LangChain"
+}

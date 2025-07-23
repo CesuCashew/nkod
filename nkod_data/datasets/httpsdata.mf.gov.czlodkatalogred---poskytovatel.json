@@ -1,0 +1,41 @@
+{
+  "uri": "https://data.gov.cz/zdroj/datové-sady/00006947/103c71d26ab9dc0dc98647b99e1e513c",
+  "keywords": [
+    "dotace"
+  ],
+  "themes": [
+    "http://publications.europa.eu/resource/authority/data-theme/GOVE"
+  ],
+  "applicableLegislation": [
+    "http://data.europa.eu/eli/dir/2019/1024/oj"
+  ],
+  "description": "Struktura (číselník) s informacemi o poskytovatelích dotací",
+  "accrualPeriodicity": "http://publications.europa.eu/resource/authority/frequency/NEVER",
+  "identifier": "https://data.mf.gov.cz/lod/katalog/red---poskytovatel",
+  "documentation": "https://data.mf.gov.cz/topics/dotace",
+  "publisher": "https://rpp-opendata.egon.gov.cz/odrpp/zdroj/orgán-veřejné-moci/00006947",
+  "spatial": "https://linked.cuzk.cz/resource/ruian/stat/1",
+  "title": "ReD - Poskytovatel",
+  "inSeries": "https://data.gov.cz/zdroj/datové-sady/00006947/eff92c79870f2dba48ac52c3f01635c0",
+  "distributions": [
+    {
+      "uri": "https://data.gov.cz/zdroj/datové-sady/00006947/103c71d26ab9dc0dc98647b99e1e513c/distribuce/0e638ee8f12eb6cac4ec98fd00be5653",
+      "title": "ReD - Poskytovatel",
+      "downloadURL": "https://red.financnisprava.cz/opendata/dataset/7ce4775c-2095-494f-9d60-2cd4d746c18d/resource/6895ac89-f6b4-42af-bfa1-9626e57b26be/download/ciselnikdotaceposkytovatel.rdf.n3.gz",
+      "accessURL": "https://red.financnisprava.cz/opendata/dataset/7ce4775c-2095-494f-9d60-2cd4d746c18d/resource/6895ac89-f6b4-42af-bfa1-9626e57b26be/download/ciselnikdotaceposkytovatel.rdf.n3.gz",
+      "format": "http://publications.europa.eu/resource/authority/file-type/RDF",
+      "mediaType": "http://www.iana.org/assignments/media-types/application/rdf+xml"
+    },
+    {
+      "uri": "https://data.gov.cz/zdroj/datové-sady/00006947/103c71d26ab9dc0dc98647b99e1e513c/distribuce/9060e71485310061a8d32eaf190a4aab",
+      "title": "ReD - Poskytovatel",
+      "downloadURL": "https://red.financnisprava.cz/opendata/dataset/7ce4775c-2095-494f-9d60-2cd4d746c18d/resource/e7bcd819-4e5a-4fca-8f99-9105976559ff/download/ciselnikdotaceposkytovatel.csv.gz",
+      "accessURL": "https://red.financnisprava.cz/opendata/dataset/7ce4775c-2095-494f-9d60-2cd4d746c18d/resource/e7bcd819-4e5a-4fca-8f99-9105976559ff/download/ciselnikdotaceposkytovatel.csv.gz",
+      "format": "http://publications.europa.eu/resource/authority/file-type/CSV",
+      "mediaType": "http://www.iana.org/assignments/media-types/text/csv"
+    }
+  ],
+  "isHVD": false,
+  "harvested_at": "2025-07-22T14:01:59.485483",
+  "scraper_version": "2.1-HVD"
+}

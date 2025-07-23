@@ -1,0 +1,39 @@
+{
+  "uri": "https://data.gov.cz/zdroj/datové-sady/00006599/841713674",
+  "keywords": [
+    "podpora",
+    "CEP",
+    "IS VaVaI",
+    "centrální evidence projektů",
+    "projekt",
+    "výzkum, experimentálni vývoj a inovace",
+    "zákon č. 130/2002 Sb.",
+    "účastník projektu"
+  ],
+  "themes": [
+    "http://publications.europa.eu/resource/authority/data-theme/TECH"
+  ],
+  "applicableLegislation": [
+    "http://data.europa.eu/eli/dir/2019/1024/oj"
+  ],
+  "description": "Datová sada obsahuje údaje o jednotlivých účastnících všech realizovaných projektů výzkumu, experimentálního vývoje a inovací evidovaných v Centrální evidenci projektů (CEP) v Informačním systému výzkumu, experimentálního vývoje a inovací (IS VaVaI).",
+  "accrualPeriodicity": "http://publications.europa.eu/resource/authority/frequency/ANNUAL",
+  "identifier": "https://data.gov.cz/zdroj/datové-sady/00006599/841713674",
+  "temporal": "https://data.gov.cz/zdroj/datové-sady/00006599/841713674/časové-pokrytí",
+  "contactPoint": "https://data.gov.cz/zdroj/datové-sady/00006599/841713674/kontaktní-bod",
+  "publisher": "https://rpp-opendata.egon.gov.cz/odrpp/zdroj/orgán-veřejné-moci/00006599",
+  "spatial": "https://linked.cuzk.cz/resource/ruian/stat/1",
+  "title": "Účastníci projektů výzkumu, experimentálního vývoje a inovací",
+  "distributions": [
+    {
+      "uri": "https://data.gov.cz/zdroj/datové-sady/00006599/841713674/distribuce/3d482ea3347f4fdf7548170cc854f71a",
+      "downloadURL": "https://www.isvavai.cz/dokumenty/opendata/CEP-ucastnici.csv",
+      "accessURL": "https://www.isvavai.cz/dokumenty/opendata/CEP-ucastnici.csv",
+      "format": "http://publications.europa.eu/resource/authority/file-type/CSV",
+      "mediaType": "http://www.iana.org/assignments/media-types/text/csv"
+    }
+  ],
+  "isHVD": false,
+  "harvested_at": "2025-07-22T14:01:50.198791",
+  "scraper_version": "2.1-HVD"
+}

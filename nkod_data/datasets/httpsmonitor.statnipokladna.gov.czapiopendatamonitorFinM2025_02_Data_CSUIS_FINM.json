@@ -1,0 +1,44 @@
+{
+  "uri": "https://data.gov.cz/zdroj/datové-sady/00006947/0d77bd61638a08f055a6de7fbab619e2",
+  "keywords": [
+    "FIN",
+    "FIN 2-12 M",
+    "FIN 2-12 M - Budget Fulfillment of LGU",
+    "FIN 2-12 M - Plnění rozpočtu ÚSC",
+    "rozpočet ÚSC",
+    "období 02/2025",
+    "period 02/2025"
+  ],
+  "themes": [
+    "http://publications.europa.eu/resource/authority/data-theme/ECON",
+    "http://publications.europa.eu/resource/authority/data-theme/GOVE"
+  ],
+  "applicableLegislation": [
+    "http://data.europa.eu/eli/dir/2019/1024/oj"
+  ],
+  "description": "Výkaz pro hodnocení plnění rozpočtu územních samosprávných celků, dobrovolných svazků obcí a regionálních rad.",
+  "accrualPeriodicity": "http://publications.europa.eu/resource/authority/frequency/NEVER",
+  "identifier": "https://monitor.statnipokladna.gov.cz/api/opendata/monitor/FinM/2025_02_Data_CSUIS_FINM",
+  "temporal": "https://data.gov.cz/zdroj/datové-sady/00006947/0d77bd61638a08f055a6de7fbab619e2/časové-pokrytí",
+  "documentation": "https://data.mf.gov.cz/topics/hospodareni-obci",
+  "publisher": "https://rpp-opendata.egon.gov.cz/odrpp/zdroj/orgán-veřejné-moci/00006947",
+  "spatial": "https://linked.cuzk.cz/resource/ruian/stat/1",
+  "title": "FIN 2-12 M - Budget Fulfillment of LGU - period 02/2025",
+  "inSeries": "https://data.gov.cz/zdroj/datové-sady/00006947/60e58223279c1d5724bab29182d76ebf",
+  "distributions": [
+    {
+      "uri": "https://data.gov.cz/zdroj/datové-sady/00006947/0d77bd61638a08f055a6de7fbab619e2/distribuce/e6f954d16b7963d7d0c1ed938508e2cc",
+      "downloadURL": "https://monitor.statnipokladna.gov.cz/data/extrakty/csv/FinM/2025_02_Data_CSUIS_FINM.zip",
+      "accessURL": "https://monitor.statnipokladna.gov.cz/data/extrakty/csv/FinM/2025_02_Data_CSUIS_FINM.zip",
+      "format": "http://publications.europa.eu/resource/authority/file-type/CSV",
+      "mediaType": "http://www.iana.org/assignments/media-types/text/csv"
+    },
+    {
+      "uri": "https://data.gov.cz/zdroj/datové-sady/00006947/0d77bd61638a08f055a6de7fbab619e2/distribuce/c7a7399d44ad75f7baf5d31689b8702a",
+      "accessURL": "https://monitor.statnipokladna.gov.cz/api/monitorws"
+    }
+  ],
+  "isHVD": false,
+  "harvested_at": "2025-07-22T14:01:58.681179",
+  "scraper_version": "2.1-HVD"
+}

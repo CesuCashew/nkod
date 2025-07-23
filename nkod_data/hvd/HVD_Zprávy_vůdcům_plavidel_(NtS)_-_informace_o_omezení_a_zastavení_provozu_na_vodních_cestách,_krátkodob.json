@@ -1,0 +1,55 @@
+{
+  "uri": "https://data.gov.cz/zdroj/datové-sady/00003352/1467547970",
+  "keywords": [
+    "vnitrozemská vodní doprava",
+    "ice",
+    "počasí",
+    "RIS",
+    "euris",
+    "inland waterway navigation",
+    "notices to skippers",
+    "nts",
+    "river information services",
+    "zprávy vůdcům plavidel",
+    "říční informační služby",
+    "FTM",
+    "ICEM",
+    "WERM",
+    "WRM",
+    "fairway and traffic",
+    "ledové jevy",
+    "provoz v plavební dráze",
+    "vodní stavy",
+    "water levels",
+    "weather"
+  ],
+  "themes": [
+    "http://eurovoc.europa.eu/4359",
+    "http://eurovoc.europa.eu/4515",
+    "http://eurovoc.europa.eu/4735",
+    "http://eurovoc.europa.eu/4736",
+    "http://publications.europa.eu/resource/authority/data-theme/TRAN"
+  ],
+  "applicableLegislation": [
+    "http://data.europa.eu/eli/dir/2019/1024/oj",
+    "http://data.europa.eu/eli/reg_impl/2023/138/oj"
+  ],
+  "description": "Zprávy vůdcům plavidel obsahují dynamické informace týkající se aktuálních a budoucích změn stavu provozu na vnitrozemských vodních cestách. Zprávy jsou rozděleny do čtyř kategorií: zprávy týkající se provozu v plavební dráze (angl. zkr. FTM), zprávy ohledně vodních stavů (angl. zkr. WRM), zprávy ohledně počasí (angl. zkr. WERM) a zprávy ohledně ledových jevů (angl. zkr. ICEM). Datové sady na EuRIS API obsahují i mezinárodní datové sady partnerských států, které uplatňují zvolené typy služeb dle směrnice Evropského parlamentu a Rady 2005/44/ES o harmonizovaných říčních informačních službách (RIS) na vnitrozemských vodních cestách ve Společenství. Tato datová sada zahrnuje data datového souboru \"Další fyzická omezení na vodních cestách, Dočasné částečné uzávěry na vodní cestě, Omezení způsobená povodní a ledem\" a \" Krátkodobé změny provozních dob plavebních komor a mostů\" dle přílohy č. 6 prováděcího nařízení Komise (EU) 2023/138, kterým se stanoví seznam konkrétních datových souborů s vysokou hodnotou a opatření pro jejich zveřejnění a opakované použití.",
+  "accrualPeriodicity": "http://publications.europa.eu/resource/authority/frequency/UPDATE_CONT",
+  "contactPoint": "https://data.gov.cz/zdroj/datové-sady/00003352/1467547970/kontaktní-bod",
+  "publisher": "https://rpp-opendata.egon.gov.cz/odrpp/zdroj/orgán-veřejné-moci/00003352",
+  "spatial": "http://publications.europa.eu/resource/authority/continent/EUROPE",
+  "title": "Zprávy vůdcům plavidel (NtS) - informace o omezení a zastavení provozu na vodních cestách, krátkodobé změny provozních dob plavebních komor a pohyblivých mostů, varování o hydrologických a meteorologických nebezpečích",
+  "hvdCategory": "http://data.europa.eu/bna/c_b79e35eb",
+  "distributions": [
+    {
+      "uri": "https://data.gov.cz/zdroj/datové-sady/00003352/1467547970/distribuce/21e644fb945480458fe5b02eed870004",
+      "title": "EuRIS NtS",
+      "accessURL": "https://www.eurisportal.eu/doc/api?urls.primaryName=NtS_v2",
+      "applicableLegislation": "http://data.europa.eu/eli/reg_impl/2023/138/oj"
+    }
+  ],
+  "isHVD": true,
+  "harvested_at": "2025-07-22T14:01:49.048173",
+  "scraper_version": "2.1-HVD"
+}

@@ -1,0 +1,44 @@
+{
+  "uri": "https://data.gov.cz/zdroj/datové-sady/00006947/08b04ae3b2d5802faf1cd5f668ee4538",
+  "keywords": [
+    "SF",
+    "FIN",
+    "FIN 1-12 SF",
+    "FIN 1-12 SF - Budget Fulfillment of SF",
+    "FIN 1-12 SF - Plnění rozpočtu SF",
+    "období 09/2021",
+    "period 09/2021"
+  ],
+  "themes": [
+    "http://publications.europa.eu/resource/authority/data-theme/ECON",
+    "http://publications.europa.eu/resource/authority/data-theme/GOVE"
+  ],
+  "applicableLegislation": [
+    "http://data.europa.eu/eli/dir/2019/1024/oj"
+  ],
+  "description": "Statement for evaluating budget fulfilment of state funds. The statement was introduced in 2015.",
+  "accrualPeriodicity": "http://publications.europa.eu/resource/authority/frequency/NEVER",
+  "identifier": "https://monitor.statnipokladna.gov.cz/api/opendata/monitor/FinSF/2021_09_Data_CSUIS_FINSF",
+  "temporal": "https://data.gov.cz/zdroj/datové-sady/00006947/08b04ae3b2d5802faf1cd5f668ee4538/časové-pokrytí",
+  "documentation": "https://data.mf.gov.cz/topics/monitor",
+  "publisher": "https://rpp-opendata.egon.gov.cz/odrpp/zdroj/orgán-veřejné-moci/00006947",
+  "spatial": "https://linked.cuzk.cz/resource/ruian/stat/1",
+  "title": "FIN 1-12 SF - Budget Fulfillment of SF - period 09/2021",
+  "inSeries": "https://data.gov.cz/zdroj/datové-sady/00006947/a3fcaae1acd521636237ba9335b8b679",
+  "distributions": [
+    {
+      "uri": "https://data.gov.cz/zdroj/datové-sady/00006947/08b04ae3b2d5802faf1cd5f668ee4538/distribuce/83e64160863d0d56db8e7e21ab6eb320",
+      "downloadURL": "https://monitor.statnipokladna.gov.cz/data/extrakty/csv/FinSF/2021_09_Data_CSUIS_FINSF.zip",
+      "accessURL": "https://monitor.statnipokladna.gov.cz/data/extrakty/csv/FinSF/2021_09_Data_CSUIS_FINSF.zip",
+      "format": "http://publications.europa.eu/resource/authority/file-type/CSV",
+      "mediaType": "http://www.iana.org/assignments/media-types/text/csv"
+    },
+    {
+      "uri": "https://data.gov.cz/zdroj/datové-sady/00006947/08b04ae3b2d5802faf1cd5f668ee4538/distribuce/d9f2012db4e774abbcb9eceb965a4ca4",
+      "accessURL": "https://monitor.statnipokladna.gov.cz/api/monitorws"
+    }
+  ],
+  "isHVD": false,
+  "harvested_at": "2025-07-22T14:01:57.190147",
+  "scraper_version": "2.1-HVD"
+}

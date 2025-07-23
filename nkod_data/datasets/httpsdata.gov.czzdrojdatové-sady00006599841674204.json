@@ -1,0 +1,35 @@
+{
+  "uri": "https://data.gov.cz/zdroj/datové-sady/00006599/841674204",
+  "keywords": [
+    "veřejná soutěž",
+    "IS VaVaI",
+    "VES",
+    "výzkum, experimentálni vývoj a inovace"
+  ],
+  "themes": [
+    "http://publications.europa.eu/resource/authority/data-theme/TECH"
+  ],
+  "applicableLegislation": [
+    "http://data.europa.eu/eli/dir/2019/1024/oj"
+  ],
+  "description": "Datová sada obsahuje údaje o všech veřejných soutěžích ve výzkumu, experimentálním vývoji a inovacích evidovaných v Evidenci veřejných soutěží (VES) v Informačním systému výzkumu, experimentálního vývoje a inovací (IS VaVaI).",
+  "accrualPeriodicity": "http://publications.europa.eu/resource/authority/frequency/ANNUAL",
+  "identifier": "https://data.gov.cz/zdroj/datové-sady/00006599/841674204",
+  "temporal": "https://data.gov.cz/zdroj/datové-sady/00006599/841674204/časové-pokrytí",
+  "contactPoint": "https://data.gov.cz/zdroj/datové-sady/00006599/841674204/kontaktní-bod",
+  "publisher": "https://rpp-opendata.egon.gov.cz/odrpp/zdroj/orgán-veřejné-moci/00006599",
+  "spatial": "https://linked.cuzk.cz/resource/ruian/stat/1",
+  "title": "Veřejné soutěže ve výzkumu, experimentálním vývoji a inovacích",
+  "distributions": [
+    {
+      "uri": "https://data.gov.cz/zdroj/datové-sady/00006599/841674204/distribuce/96fa0a8b884a4f25653eebab50b6d35c",
+      "downloadURL": "https://www.isvavai.cz/dokumenty/opendata/VES.csv",
+      "accessURL": "https://www.isvavai.cz/dokumenty/opendata/VES.csv",
+      "format": "http://publications.europa.eu/resource/authority/file-type/CSV",
+      "mediaType": "http://www.iana.org/assignments/media-types/text/csv"
+    }
+  ],
+  "isHVD": false,
+  "harvested_at": "2025-07-22T14:01:49.621322",
+  "scraper_version": "2.1-HVD"
+}

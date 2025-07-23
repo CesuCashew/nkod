@@ -1,0 +1,37 @@
+{
+  "uri": "https://data.gov.cz/zdroj/datové-sady/00006599/841681964",
+  "keywords": [
+    "podpora",
+    "CEA",
+    "IS VaVaI",
+    "příjemce",
+    "výzkum, experimentálni vývoj a inovace",
+    "zákon č. 130/2002 Sb."
+  ],
+  "themes": [
+    "http://publications.europa.eu/resource/authority/data-theme/TECH"
+  ],
+  "applicableLegislation": [
+    "http://data.europa.eu/eli/dir/2019/1024/oj"
+  ],
+  "description": "Datová sada obsahuje údaje o podpoře pro příjemce ve výzkumu, experimentálním vývoji a inovacích evidovaných v Centrální evidenci aktivit (CEA) v Informačním systému výzkumu, experimentálního vývoje a inovací (IS VaVaI) - podpora na rozvoj výzkumných organizací podle zhodnocení jimi dosažených výsledků, podpora specifického vysokoškolského výzkumu atd.",
+  "accrualPeriodicity": "http://publications.europa.eu/resource/authority/frequency/ANNUAL",
+  "identifier": "https://data.gov.cz/zdroj/datové-sady/00006599/841681964",
+  "temporal": "https://data.gov.cz/zdroj/datové-sady/00006599/841681964/časové-pokrytí",
+  "contactPoint": "https://data.gov.cz/zdroj/datové-sady/00006599/841681964/kontaktní-bod",
+  "publisher": "https://rpp-opendata.egon.gov.cz/odrpp/zdroj/orgán-veřejné-moci/00006599",
+  "spatial": "https://linked.cuzk.cz/resource/ruian/stat/1",
+  "title": "Podpora pro příjemce ve výzkumu, experimentálním vývoji a inovacích",
+  "distributions": [
+    {
+      "uri": "https://data.gov.cz/zdroj/datové-sady/00006599/841681964/distribuce/7348840b0d39f7948dcdec4c2d768157",
+      "downloadURL": "https://www.isvavai.cz/dokumenty/opendata/CEA-prijemce.csv",
+      "accessURL": "https://www.isvavai.cz/dokumenty/opendata/CEA-prijemce.csv",
+      "format": "http://publications.europa.eu/resource/authority/file-type/CSV",
+      "mediaType": "http://www.iana.org/assignments/media-types/text/csv"
+    }
+  ],
+  "isHVD": false,
+  "harvested_at": "2025-07-22T14:01:49.964736",
+  "scraper_version": "2.1-HVD"
+}

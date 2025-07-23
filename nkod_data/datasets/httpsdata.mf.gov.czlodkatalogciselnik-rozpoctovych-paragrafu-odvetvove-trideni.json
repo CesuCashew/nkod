@@ -1,0 +1,49 @@
+{
+  "uri": "https://data.gov.cz/zdroj/datové-sady/00006947/0828a02d158f9e0f896de9eb0283c25b",
+  "keywords": [
+    "rozpočet"
+  ],
+  "themes": [
+    "http://publications.europa.eu/resource/authority/data-theme/ECON"
+  ],
+  "applicableLegislation": [
+    "http://data.europa.eu/eli/dir/2019/1024/oj"
+  ],
+  "description": "",
+  "accrualPeriodicity": "http://publications.europa.eu/resource/authority/frequency/IRREG",
+  "identifier": "https://data.mf.gov.cz/lod/katalog/ciselnik-rozpoctovych-paragrafu-odvetvove-trideni",
+  "documentation": "https://data.mf.gov.cz/topics/statni-rozpocet",
+  "publisher": "https://rpp-opendata.egon.gov.cz/odrpp/zdroj/orgán-veřejné-moci/00006947",
+  "spatial": "https://linked.cuzk.cz/resource/ruian/stat/1",
+  "title": "Číselník rozpočtových paragrafů (odvětvové třídění)",
+  "inSeries": "https://data.gov.cz/zdroj/datové-sady/00006947/44b8d2045628cf14c493777540249d3a",
+  "distributions": [
+    {
+      "uri": "https://data.gov.cz/zdroj/datové-sady/00006947/0828a02d158f9e0f896de9eb0283c25b/distribuce/2f42c90169352f082da00beaab92aeb7",
+      "title": "Číselník rozpočtových paragrafů",
+      "downloadURL": "https://opendata.mfcr.cz/exports/paragraf/paragraf.xlsx",
+      "accessURL": "https://opendata.mfcr.cz/exports/paragraf/paragraf.xlsx",
+      "format": "http://publications.europa.eu/resource/authority/file-type/XLSX",
+      "mediaType": "http://www.iana.org/assignments/media-types/application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    },
+    {
+      "uri": "https://data.gov.cz/zdroj/datové-sady/00006947/0828a02d158f9e0f896de9eb0283c25b/distribuce/5fd525446cb456eb306d23b75744f428",
+      "title": "Číselník rozpočtových paragrafů",
+      "downloadURL": "https://opendata.mfcr.cz/exports/paragraf/paragraf.json",
+      "accessURL": "https://opendata.mfcr.cz/exports/paragraf/paragraf.json",
+      "format": "http://publications.europa.eu/resource/authority/file-type/JSON",
+      "mediaType": "http://www.iana.org/assignments/media-types/application/json"
+    },
+    {
+      "uri": "https://data.gov.cz/zdroj/datové-sady/00006947/0828a02d158f9e0f896de9eb0283c25b/distribuce/b159bdbaf39b7c7642d20788db87006a",
+      "title": "Číselník rozpočtových paragrafů",
+      "downloadURL": "https://opendata.mfcr.cz/exports/paragraf/paragraf.csv",
+      "accessURL": "https://opendata.mfcr.cz/exports/paragraf/paragraf.csv",
+      "format": "http://publications.europa.eu/resource/authority/file-type/CSV",
+      "mediaType": "http://www.iana.org/assignments/media-types/text/csv"
+    }
+  ],
+  "isHVD": false,
+  "harvested_at": "2025-07-22T14:01:56.843955",
+  "scraper_version": "2.1-HVD"
+}

@@ -1,0 +1,46 @@
+{
+  "uri": "https://data.gov.cz/zdroj/datové-sady/00003352/1467540066",
+  "keywords": [
+    "vnitrozemská vodní doprava",
+    "RIS",
+    "euris",
+    "inland waterway navigation",
+    "river information services",
+    "říční informační služby",
+    " informační systémy pro zobrazování vnitrozemských elektronických plavebních map",
+    "IECDIS",
+    "IENC",
+    "inland electronic navigational charts",
+    "vnitrozemské elektronické plavební mapy",
+    "inland electronic chart and display information system"
+  ],
+  "themes": [
+    "http://eurovoc.europa.eu/4359",
+    "http://eurovoc.europa.eu/4515",
+    "http://eurovoc.europa.eu/4735",
+    "http://eurovoc.europa.eu/4736",
+    "http://publications.europa.eu/resource/authority/data-theme/TRAN"
+  ],
+  "applicableLegislation": [
+    "http://data.europa.eu/eli/dir/2019/1024/oj",
+    "http://data.europa.eu/eli/reg_impl/2023/138/oj"
+  ],
+  "description": "Vnitrozemské elektronické plavební mapy (angl. zkr. IENC) jsou specializované digitální mapy určené pro informační systémy pro zobrazování vnitrozemských elektronických plavebních map (angl. zkr.  IECDIS). Tyto systémy jsou určeny primárně pro palubní navigační vybavení Mapy IENC představují informační položky RIS dle § 4 vyhlášky č. 356/2009 Sb. o informacích zaznamenávaných v Říčních informačních službách. Mapový standard je definován dle aktuální verze kódovací příručky pro vnitrozemské elektronické plavební mapy (Encoding Guide for Inland ENCs). Datové sady na EuRIS API v podobě digitálních mapových listů obsahují i mezinárodní IENC partnerských států, které uplatňují zvolené typy služeb dle směrnice Evropského parlamentu a Rady 2005/44/ES o harmonizovaných říčních informačních službách (RIS) na vnitrozemských vodních cestách ve Společenství. Každý mapový list na EuRIS API má svůj vlastní identifikátor (mapID) a název dle úseku vodní cesty (name). Odkaz na přehledný seznam všech mapových listů na EuRIS portálu je: https://www.eurisportal.eu/enc",
+  "accrualPeriodicity": "http://publications.europa.eu/resource/authority/frequency/ANNUAL",
+  "contactPoint": "https://data.gov.cz/zdroj/datové-sady/00003352/1467540066/kontaktní-bod",
+  "publisher": "https://rpp-opendata.egon.gov.cz/odrpp/zdroj/orgán-veřejné-moci/00003352",
+  "spatial": "http://publications.europa.eu/resource/authority/continent/EUROPE",
+  "title": "Vnitrozemské elektronické plavební mapy podle standardu pro vnitrozemský ECDIS",
+  "hvdCategory": "http://data.europa.eu/bna/c_b79e35eb",
+  "distributions": [
+    {
+      "uri": "https://data.gov.cz/zdroj/datové-sady/00003352/1467540066/distribuce/2488782e00bcb84e652e7dd000078e02",
+      "title": "EuRIS IENC",
+      "accessURL": "https://www.eurisportal.eu/doc/api?urls.primaryName=IENC_v1",
+      "applicableLegislation": "http://data.europa.eu/eli/reg_impl/2023/138/oj"
+    }
+  ],
+  "isHVD": true,
+  "harvested_at": "2025-07-23T10:09:52.968420",
+  "scraper_version": "2.1-HVD-LangChain"
+}

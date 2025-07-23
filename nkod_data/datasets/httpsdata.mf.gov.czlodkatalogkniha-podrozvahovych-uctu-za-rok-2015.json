@@ -1,0 +1,33 @@
+{
+  "uri": "https://data.gov.cz/zdroj/datové-sady/00006947/00e970df1ef94802d7a5ce6a8e8b551d",
+  "keywords": [
+    "výkazy"
+  ],
+  "themes": [
+    "http://publications.europa.eu/resource/authority/data-theme/GOVE"
+  ],
+  "applicableLegislation": [
+    "http://data.europa.eu/eli/dir/2019/1024/oj"
+  ],
+  "description": "",
+  "accrualPeriodicity": "http://publications.europa.eu/resource/authority/frequency/NEVER",
+  "identifier": "https://data.mf.gov.cz/lod/katalog/kniha-podrozvahovych-uctu-za-rok-2015",
+  "documentation": "https://data.mf.gov.cz/topics/konsolidace",
+  "publisher": "https://rpp-opendata.egon.gov.cz/odrpp/zdroj/orgán-veřejné-moci/00006947",
+  "spatial": "https://linked.cuzk.cz/resource/ruian/stat/1",
+  "title": "Kniha podrozvahových účtů za rok 2015",
+  "inSeries": "https://data.gov.cz/zdroj/datové-sady/00006947/fd09b09ebe394454c13dc0690270010f",
+  "distributions": [
+    {
+      "uri": "https://data.gov.cz/zdroj/datové-sady/00006947/00e970df1ef94802d7a5ce6a8e8b551d/distribuce/420511faf083f58b76d9f1aef08ed7a6",
+      "title": "Kniha podrozvahových účtů za rok 2015",
+      "downloadURL": "https://data.mf.gov.cz/katalog/sites/default/files/Priloha_-_Kniha_podrozvahovych_uctu_za_rok_2015.xls",
+      "accessURL": "https://data.mf.gov.cz/katalog/cs/file/1732/download?token=cgF1WqoO",
+      "format": "http://publications.europa.eu/resource/authority/file-type/XLS",
+      "mediaType": "http://www.iana.org/assignments/media-types/application/vnd.ms-excel"
+    }
+  ],
+  "isHVD": false,
+  "harvested_at": "2025-07-22T14:01:54.317387",
+  "scraper_version": "2.1-HVD"
+}

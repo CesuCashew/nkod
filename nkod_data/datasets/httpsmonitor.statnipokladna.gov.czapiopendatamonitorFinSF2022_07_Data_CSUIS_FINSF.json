@@ -1,0 +1,44 @@
+{
+  "uri": "https://data.gov.cz/zdroj/datové-sady/00006947/0b7cb268edaed87eb37df4acf47e8454",
+  "keywords": [
+    "SF",
+    "FIN",
+    "FIN 1-12 SF",
+    "FIN 1-12 SF - Budget Fulfillment of SF",
+    "FIN 1-12 SF - Plnění rozpočtu SF",
+    "období 07/2022",
+    "period 07/2022"
+  ],
+  "themes": [
+    "http://publications.europa.eu/resource/authority/data-theme/ECON",
+    "http://publications.europa.eu/resource/authority/data-theme/GOVE"
+  ],
+  "applicableLegislation": [
+    "http://data.europa.eu/eli/dir/2019/1024/oj"
+  ],
+  "description": "Statement for evaluating budget fulfilment of state funds. The statement was introduced in 2015.",
+  "accrualPeriodicity": "http://publications.europa.eu/resource/authority/frequency/NEVER",
+  "identifier": "https://monitor.statnipokladna.gov.cz/api/opendata/monitor/FinSF/2022_07_Data_CSUIS_FINSF",
+  "temporal": "https://data.gov.cz/zdroj/datové-sady/00006947/0b7cb268edaed87eb37df4acf47e8454/časové-pokrytí",
+  "documentation": "https://data.mf.gov.cz/topics/monitor",
+  "publisher": "https://rpp-opendata.egon.gov.cz/odrpp/zdroj/orgán-veřejné-moci/00006947",
+  "spatial": "https://linked.cuzk.cz/resource/ruian/stat/1",
+  "title": "FIN 1-12 SF - Plnění rozpočtu SF - období 07/2022",
+  "inSeries": "https://data.gov.cz/zdroj/datové-sady/00006947/a3fcaae1acd521636237ba9335b8b679",
+  "distributions": [
+    {
+      "uri": "https://data.gov.cz/zdroj/datové-sady/00006947/0b7cb268edaed87eb37df4acf47e8454/distribuce/84fd3a9d4caf4e0f1238a818bf6ed0b6",
+      "downloadURL": "https://monitor.statnipokladna.gov.cz/data/extrakty/csv/FinSF/2022_07_Data_CSUIS_FINSF.zip",
+      "accessURL": "https://monitor.statnipokladna.gov.cz/data/extrakty/csv/FinSF/2022_07_Data_CSUIS_FINSF.zip",
+      "format": "http://publications.europa.eu/resource/authority/file-type/CSV",
+      "mediaType": "http://www.iana.org/assignments/media-types/text/csv"
+    },
+    {
+      "uri": "https://data.gov.cz/zdroj/datové-sady/00006947/0b7cb268edaed87eb37df4acf47e8454/distribuce/cba4ef0e306f039039992b88fa5528c5",
+      "accessURL": "https://monitor.statnipokladna.gov.cz/api/monitorws"
+    }
+  ],
+  "isHVD": false,
+  "harvested_at": "2025-07-22T14:01:57.760499",
+  "scraper_version": "2.1-HVD"
+}

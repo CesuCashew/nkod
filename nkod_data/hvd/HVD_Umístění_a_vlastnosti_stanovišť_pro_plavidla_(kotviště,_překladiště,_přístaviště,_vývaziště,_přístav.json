@@ -1,0 +1,52 @@
+{
+  "uri": "https://data.gov.cz/zdroj/datové-sady/00003352/1467543610",
+  "keywords": [
+    "vnitrozemská vodní doprava",
+    "přístaviště",
+    "RIS",
+    "euris",
+    "inland waterway navigation",
+    "river information services",
+    "říční informační služby",
+    "reference data",
+    "referenční data",
+    "anchorage berths",
+    "berths",
+    "berths without transshipment",
+    "kotviště",
+    "překladiště",
+    "přístavní polohy",
+    "stanoviště pro plavidla",
+    "transshipment berths",
+    "vývaziště"
+  ],
+  "themes": [
+    "http://eurovoc.europa.eu/4359",
+    "http://eurovoc.europa.eu/4515",
+    "http://eurovoc.europa.eu/4735",
+    "http://eurovoc.europa.eu/4736",
+    "http://publications.europa.eu/resource/authority/data-theme/TRAN"
+  ],
+  "applicableLegislation": [
+    "http://data.europa.eu/eli/dir/2019/1024/oj",
+    "http://data.europa.eu/eli/reg_impl/2023/138/oj"
+  ],
+  "description": "Location and characteristics of berths are part of the EuRIS reference data dataset. The dataset contains IDs, names and other parameters of vessel locations. The datasets on the EuRIS API also contain international datasets of partner countries that implement selected types of services according to Directive 2005/44/EC of the European Parliament and of the Council on harmonised river information services (RIS) on inland waterways in the Community. This dataset includes data from the dataset \"Location and characteristics of ports and transhipment sites\" according to Annex 6 of the Commission Implementing Regulation (EU) 2023/138, laying down a list of specific high-value datasets and the arrangements for their publication and re-use.\n\nThis distribution of the dataset contains personal data in the meaning of Act No. 101/2000 Sb., on personal data protection and Regulation (EU) 2016/679 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (General Data Protection Regulation). With download of this distribution you are becoming personal data controller. Thus, you must comply with all the rules and duties which arise from the applicable legal regulation. Especially, you must comply with the duty to process personal data only for legal and legitimate purpose, in a way that is adequate for such purpose and for the time that is necessary for such purpose. You also have to have a lawful legal ground for the processing.",
+  "accrualPeriodicity": "http://publications.europa.eu/resource/authority/frequency/AS_NEEDED",
+  "contactPoint": "https://data.gov.cz/zdroj/datové-sady/00003352/1467543610/kontaktní-bod",
+  "publisher": "https://rpp-opendata.egon.gov.cz/odrpp/zdroj/orgán-veřejné-moci/00003352",
+  "spatial": "http://publications.europa.eu/resource/authority/continent/EUROPE",
+  "title": "Umístění a vlastnosti stanovišť pro plavidla (kotviště, překladiště, přístaviště, vývaziště, přístavní polohy)",
+  "hvdCategory": "http://data.europa.eu/bna/c_b79e35eb",
+  "distributions": [
+    {
+      "uri": "https://data.gov.cz/zdroj/datové-sady/00003352/1467543610/distribuce/a0256a9c44ccca84a2806fad669a932d",
+      "title": "EuRIS Berth",
+      "accessURL": "https://www.eurisportal.eu/doc/api/?urls.primaryName=Berth_v2#/",
+      "applicableLegislation": "http://data.europa.eu/eli/reg_impl/2023/138/oj"
+    }
+  ],
+  "isHVD": true,
+  "harvested_at": "2025-07-23T10:09:53.198876",
+  "scraper_version": "2.1-HVD-LangChain"
+}

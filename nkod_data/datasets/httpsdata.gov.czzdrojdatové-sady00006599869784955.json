@@ -1,0 +1,33 @@
+{
+  "uri": "https://data.gov.cz/zdroj/datové-sady/00006599/869784955",
+  "keywords": [
+    "IS VaVaI",
+    "způsob publikování",
+    "číselník"
+  ],
+  "themes": [
+    "http://publications.europa.eu/resource/authority/data-theme/TECH"
+  ],
+  "applicableLegislation": [
+    "http://data.europa.eu/eli/dir/2019/1024/oj"
+  ],
+  "description": "Číselník způsobů publikování použitý v IS VaVaI.",
+  "accrualPeriodicity": "http://publications.europa.eu/resource/authority/frequency/ANNUAL",
+  "identifier": "https://data.gov.cz/zdroj/datové-sady/00006599/869784955",
+  "contactPoint": "https://data.gov.cz/zdroj/datové-sady/00006599/869784955/kontaktní-bod",
+  "publisher": "https://rpp-opendata.egon.gov.cz/odrpp/zdroj/orgán-veřejné-moci/00006599",
+  "spatial": "https://linked.cuzk.cz/resource/ruian/stat/1",
+  "title": "IS VaVaI: Číselník způsobů publikování ve VaVaI",
+  "distributions": [
+    {
+      "uri": "https://data.gov.cz/zdroj/datové-sady/00006599/869784955/distribuce/4bbde4ff59502aa1ea5bbddd060c2234",
+      "downloadURL": "https://www.isvavai.cz/dokumenty/opendata/ciselniky/zpusob-publikovani.jsonld",
+      "accessURL": "https://www.isvavai.cz/dokumenty/opendata/ciselniky/zpusob-publikovani.jsonld",
+      "format": "http://publications.europa.eu/resource/authority/file-type/JSON_LD",
+      "mediaType": "http://www.iana.org/assignments/media-types/application/ld+json"
+    }
+  ],
+  "isHVD": false,
+  "harvested_at": "2025-07-22T14:01:53.631476",
+  "scraper_version": "2.1-HVD"
+}

@@ -1,0 +1,33 @@
+{
+  "uri": "https://data.gov.cz/zdroj/datové-sady/00006599/869779886",
+  "keywords": [
+    "IS VaVaI",
+    "typ programu",
+    "číselník"
+  ],
+  "themes": [
+    "http://publications.europa.eu/resource/authority/data-theme/TECH"
+  ],
+  "applicableLegislation": [
+    "http://data.europa.eu/eli/dir/2019/1024/oj"
+  ],
+  "description": "Číselník typů programu použitý v IS VaVaI.",
+  "accrualPeriodicity": "http://publications.europa.eu/resource/authority/frequency/ANNUAL",
+  "identifier": "https://data.gov.cz/zdroj/datové-sady/00006599/869779886",
+  "contactPoint": "https://data.gov.cz/zdroj/datové-sady/00006599/869779886/kontaktní-bod",
+  "publisher": "https://rpp-opendata.egon.gov.cz/odrpp/zdroj/orgán-veřejné-moci/00006599",
+  "spatial": "https://linked.cuzk.cz/resource/ruian/stat/1",
+  "title": "IS VaVaI: Číselník typů programu ve VaVaI",
+  "distributions": [
+    {
+      "uri": "https://data.gov.cz/zdroj/datové-sady/00006599/869779886/distribuce/5ed1565e015882fb65b6acfef0e66935",
+      "downloadURL": "https://www.isvavai.cz/dokumenty/opendata/ciselniky/typ-programu.jsonld",
+      "accessURL": "https://www.isvavai.cz/dokumenty/opendata/ciselniky/typ-programu.jsonld",
+      "format": "http://publications.europa.eu/resource/authority/file-type/JSON_LD",
+      "mediaType": "http://www.iana.org/assignments/media-types/application/ld+json"
+    }
+  ],
+  "isHVD": false,
+  "harvested_at": "2025-07-22T14:01:53.137117",
+  "scraper_version": "2.1-HVD"
+}

@@ -1,0 +1,40 @@
+{
+  "uri": "https://data.gov.cz/zdroj/datové-sady/00006599/995115326",
+  "keywords": [
+    "document",
+    "dokument",
+    "informace",
+    "information",
+    "oznámení",
+    "Official board",
+    "The Office of the Government",
+    "notification",
+    "Úřad vlády ČR",
+    "úřední deska"
+  ],
+  "themes": [
+    "http://publications.europa.eu/resource/authority/data-theme/GOVE"
+  ],
+  "applicableLegislation": [
+    "http://data.europa.eu/eli/dir/2019/1024/oj"
+  ],
+  "specification": "https://ofn.gov.cz/úřední-desky/2021-07-20/",
+  "description": "Information published on the official bulletin board of the Office of the Government of the Czech Republic.",
+  "accrualPeriodicity": "http://publications.europa.eu/resource/authority/frequency/DAILY",
+  "identifier": "https://data.gov.cz/zdroj/datové-sady/00006599/995115326",
+  "publisher": "https://rpp-opendata.egon.gov.cz/odrpp/zdroj/orgán-veřejné-moci/00006599",
+  "spatial": "https://linked.cuzk.cz/resource/ruian/stat/1",
+  "title": "Official board - The Office of the Government of the Czech Republic",
+  "distributions": [
+    {
+      "uri": "https://data.gov.cz/zdroj/datové-sady/00006599/995115326/distribuce/66487cdae3ae21b858e956086827f197",
+      "downloadURL": "https://www.vlada.cz/cz/urad-vlady/uredni_deska/uredni_deska.jsonld",
+      "accessURL": "https://www.vlada.cz/cz/urad-vlady/uredni_deska/uredni_deska.jsonld",
+      "format": "http://publications.europa.eu/resource/authority/file-type/JSON_LD",
+      "mediaType": "http://www.iana.org/assignments/media-types/application/json"
+    }
+  ],
+  "isHVD": false,
+  "harvested_at": "2025-07-22T14:01:54.206286",
+  "scraper_version": "2.1-HVD"
+}

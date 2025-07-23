@@ -1,0 +1,44 @@
+{
+  "uri": "https://data.gov.cz/zdroj/datové-sady/00006947/068523f0daa02682ee259e76632811ab",
+  "keywords": [
+    "P&L",
+    "Profit and Loss",
+    "Profit and Loss Statement",
+    "Výkaz zisku a ztráty",
+    "Výsledovka",
+    "období 03/2016",
+    "period 03/2016"
+  ],
+  "themes": [
+    "http://publications.europa.eu/resource/authority/data-theme/ECON",
+    "http://publications.europa.eu/resource/authority/data-theme/GOVE"
+  ],
+  "applicableLegislation": [
+    "http://data.europa.eu/eli/dir/2019/1024/oj"
+  ],
+  "description": "Accounting statements: Profit and loss statement",
+  "accrualPeriodicity": "http://publications.europa.eu/resource/authority/frequency/NEVER",
+  "identifier": "https://monitor.statnipokladna.gov.cz/api/opendata/monitor/Zisk-a-ztraty/2016_03_Data_CSUIS_VYKZZ",
+  "temporal": "https://data.gov.cz/zdroj/datové-sady/00006947/068523f0daa02682ee259e76632811ab/časové-pokrytí",
+  "documentation": "https://data.mf.gov.cz/topics/monitor",
+  "publisher": "https://rpp-opendata.egon.gov.cz/odrpp/zdroj/orgán-veřejné-moci/00006947",
+  "spatial": "https://linked.cuzk.cz/resource/ruian/stat/1",
+  "title": "Profit and Loss Statement - period 03/2016",
+  "inSeries": "https://data.gov.cz/zdroj/datové-sady/00006947/f740d707cf8e15c2a34906a87c9ba9ac",
+  "distributions": [
+    {
+      "uri": "https://data.gov.cz/zdroj/datové-sady/00006947/068523f0daa02682ee259e76632811ab/distribuce/e898c39e3945e11fcb7694aae99b3bbf",
+      "downloadURL": "https://monitor.statnipokladna.gov.cz/data/extrakty/csv/ZiskZtraty/2016_03_Data_CSUIS_VYKZZ.zip",
+      "accessURL": "https://monitor.statnipokladna.gov.cz/data/extrakty/csv/ZiskZtraty/2016_03_Data_CSUIS_VYKZZ.zip",
+      "format": "http://publications.europa.eu/resource/authority/file-type/CSV",
+      "mediaType": "http://www.iana.org/assignments/media-types/text/csv"
+    },
+    {
+      "uri": "https://data.gov.cz/zdroj/datové-sady/00006947/068523f0daa02682ee259e76632811ab/distribuce/421408e2260be06c17a43f82f0d771c4",
+      "accessURL": "https://monitor.statnipokladna.gov.cz/api/monitorws"
+    }
+  ],
+  "isHVD": false,
+  "harvested_at": "2025-07-22T14:01:55.941137",
+  "scraper_version": "2.1-HVD"
+}

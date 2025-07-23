@@ -1,0 +1,32 @@
+{
+  "uri": "https://data.gov.cz/zdroj/datové-sady/00006599/1449389524",
+  "keywords": [
+    "IS VaVaI",
+    "číselník",
+    "teritoriální rozsah patentové ochrany"
+  ],
+  "themes": [
+    "http://publications.europa.eu/resource/authority/data-theme/TECH"
+  ],
+  "applicableLegislation": [
+    "http://data.europa.eu/eli/dir/2019/1024/oj"
+  ],
+  "description": "Číselník teritoriálního rozsahu patentové ochrany.",
+  "accrualPeriodicity": "http://publications.europa.eu/resource/authority/frequency/ANNUAL",
+  "contactPoint": "https://data.gov.cz/zdroj/datové-sady/00006599/1449389524/kontaktní-bod",
+  "publisher": "https://rpp-opendata.egon.gov.cz/odrpp/zdroj/orgán-veřejné-moci/00006599",
+  "spatial": "https://linked.cuzk.cz/resource/ruian/stat/1",
+  "title": "IS VaVaI: Číselník teritoriálního rozsahu patentové ochrany",
+  "distributions": [
+    {
+      "uri": "https://data.gov.cz/zdroj/datové-sady/00006599/1449389524/distribuce/e20d356bbec4cc7b6a4211c167251e5c",
+      "downloadURL": "https://www.isvavai.cz/dokumenty/opendata/ciselniky/teritorialni-rozsah-patentove-ochrany.jsonld",
+      "accessURL": "https://www.isvavai.cz/dokumenty/opendata/ciselniky/teritorialni-rozsah-patentove-ochrany.jsonld",
+      "format": "http://publications.europa.eu/resource/authority/file-type/JSON_LD",
+      "mediaType": "http://www.iana.org/assignments/media-types/application/ld+json"
+    }
+  ],
+  "isHVD": false,
+  "harvested_at": "2025-07-22T14:01:49.508722",
+  "scraper_version": "2.1-HVD"
+}

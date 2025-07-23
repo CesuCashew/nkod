@@ -1,0 +1,33 @@
+{
+  "uri": "https://data.gov.cz/zdroj/datové-sady/00006599/869756324",
+  "keywords": [
+    "IS VaVaI",
+    "druh soutěže",
+    "číselník"
+  ],
+  "themes": [
+    "http://publications.europa.eu/resource/authority/data-theme/TECH"
+  ],
+  "applicableLegislation": [
+    "http://data.europa.eu/eli/dir/2019/1024/oj"
+  ],
+  "description": "Číselník druhů soutěže použitý v IS VaVaI.",
+  "accrualPeriodicity": "http://publications.europa.eu/resource/authority/frequency/ANNUAL",
+  "identifier": "https://data.gov.cz/zdroj/datové-sady/00006599/869756324",
+  "contactPoint": "https://data.gov.cz/zdroj/datové-sady/00006599/869756324/kontaktní-bod",
+  "publisher": "https://rpp-opendata.egon.gov.cz/odrpp/zdroj/orgán-veřejné-moci/00006599",
+  "spatial": "https://linked.cuzk.cz/resource/ruian/stat/1",
+  "title": "IS VaVaI: Číselník druhů soutěže ve VaVaI",
+  "distributions": [
+    {
+      "uri": "https://data.gov.cz/zdroj/datové-sady/00006599/869756324/distribuce/8efe15e3bd39eb97d0e0165f11fd1a0d",
+      "downloadURL": "https://www.isvavai.cz/dokumenty/opendata/ciselniky/druh-souteze.jsonld",
+      "accessURL": "https://www.isvavai.cz/dokumenty/opendata/ciselniky/druh-souteze.jsonld",
+      "format": "http://publications.europa.eu/resource/authority/file-type/JSON_LD",
+      "mediaType": "http://www.iana.org/assignments/media-types/application/ld+json"
+    }
+  ],
+  "isHVD": false,
+  "harvested_at": "2025-07-22T14:01:50.428092",
+  "scraper_version": "2.1-HVD"
+}

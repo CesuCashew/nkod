@@ -1,0 +1,33 @@
+{
+  "uri": "https://data.gov.cz/zdroj/datové-sady/00006599/869781336",
+  "keywords": [
+    "IS VaVaI",
+    "typ veřejné soutěže",
+    "číselník"
+  ],
+  "themes": [
+    "http://publications.europa.eu/resource/authority/data-theme/TECH"
+  ],
+  "applicableLegislation": [
+    "http://data.europa.eu/eli/dir/2019/1024/oj"
+  ],
+  "description": "Číselník typů veřejné soutěže podle určení účelových prostředků z rozpočtové kapitoly poskytovatele použitý v IS VaVaI.",
+  "accrualPeriodicity": "http://publications.europa.eu/resource/authority/frequency/ANNUAL",
+  "identifier": "https://data.gov.cz/zdroj/datové-sady/00006599/869781336",
+  "contactPoint": "https://data.gov.cz/zdroj/datové-sady/00006599/869781336/kontaktní-bod",
+  "publisher": "https://rpp-opendata.egon.gov.cz/odrpp/zdroj/orgán-veřejné-moci/00006599",
+  "spatial": "https://linked.cuzk.cz/resource/ruian/stat/1",
+  "title": "IS VaVaI: Číselník typů veřejné soutěže ve VaVaI podle určení účelových prostředků z rozpočtové kapitoly poskytovatele",
+  "distributions": [
+    {
+      "uri": "https://data.gov.cz/zdroj/datové-sady/00006599/869781336/distribuce/c05973353bf538f82ee68977cbbe923e",
+      "downloadURL": "https://www.isvavai.cz/dokumenty/opendata/ciselniky/typ-verejne-souteze.jsonld",
+      "accessURL": "https://www.isvavai.cz/dokumenty/opendata/ciselniky/typ-verejne-souteze.jsonld",
+      "format": "http://publications.europa.eu/resource/authority/file-type/JSON_LD",
+      "mediaType": "http://www.iana.org/assignments/media-types/application/ld+json"
+    }
+  ],
+  "isHVD": false,
+  "harvested_at": "2025-07-22T14:01:53.248854",
+  "scraper_version": "2.1-HVD"
+}
