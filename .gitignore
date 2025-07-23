@@ -41,3 +41,41 @@ ENV/
 
 # Jupyter Notebook
 .ipynb_checkpoints
+
+# Large files and directories
+complete_nkod_data/
+complete_nkod_vector_db/
+nkod_data/complete_nkod_data/
+nkod_data/nkod_vector_db/
+nkod_vector_db/
+*.sqlite3
+*.sqlite
+*.db
+*.dump
+*.sql
+*.csv
+*.json
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+*.model
+*.pth
+*.pt
+*.bin
+*.pdb
+*.sdf
+*.sav
+*.npy
+*.npz
+*.zip
+*.tar.gz
+*.tgz
+*.7z
+*.rar
+*.bz2
+*.gz
+*.xz
+*.lzma
+*.zst
+*.zstd
