@@ -1,70 +1,39 @@
 #!/usr/bin/env python3
-"""
-NKOD Scraper rozdělený do LangChain uzlů pro LangGraph
-"""
-
 import requests
 import os
+import sys
 import json
 import re
 from datetime import datetime
-from typing import Dict, List, Any, TypedDict, Optional
-from langchain_core.messages import BaseMessage
-from langchain_core.tools import BaseTool
-from pydantic import BaseModel, Field
+from urllib.parse import urlparse
 
+class NKODScraper:
+    SPARQL_ENDPOINT = "https://data.gov.cz/sparql"
+    OUTPUT_DIR = "nkod_data"
+    DEFAULT_LIMIT = None  # Neomezený počet - stáhne všechna data
+    HVD_LEGISLATION_URI = "http://data.europa.eu/eli/reg_impl/2023/138/oj"
 
-class NKODState(TypedDict):
-    """Stav pro LangGraph workflow"""
-    sparql_endpoint: str
-    session_headers: Dict[str, str]
-    output_dir: str
-    datasets: List[str]
-    processed_datasets: List[Dict[str, Any]]
-    statistics: Dict[str, Any]
-    limit: int
-    total_count: int
-    hvd_count: int
-
-
-class NKODConfig(BaseModel):
-    """Konfigurace pro NKOD scraper"""
-    sparql_endpoint: str = "https://data.gov.cz/sparql"
-    output_dir: str = "nkod_data"
-    limit: Optional[int] = None
-    hvd_legislation_uri: str = "http://data.europa.eu/eli/reg_impl/2023/138/oj"
-    
-    class Config:
-        arbitrary_types_allowed = True
-
-
-class DataFetchNode:
-    """Uzel pro stahování dat z NKOD pomocí SPARQL dotazů"""
-    
-    def __init__(self, config: NKODConfig):
-        self.config = config
+    def __init__(self, limit=None):
+        self.limit = limit if limit is not None else self.DEFAULT_LIMIT
+        os.makedirs(self.OUTPUT_DIR, exist_ok=True)
+        os.makedirs(f"{self.OUTPUT_DIR}/datasets", exist_ok=True)
+        os.makedirs(f"{self.OUTPUT_DIR}/hvd", exist_ok=True)  # Složka pro HVD datasety
         self.session = requests.Session()
         self.session.headers.update({
-            "User-Agent": "NKOD-Scraper/2.1-HVD-LangChain",
+            "User-Agent": "NKOD-Scraper/2.1-HVD",
             "Accept": "application/sparql-results+json"
         })
-    
-    def sparql_query(self, query: str) -> Dict[str, Any]:
-        """Vykoná SPARQL dotaz"""
+
+    def sparql_query(self, query):
         try:
-            r = self.session.post(
-                self.config.sparql_endpoint, 
-                data={"query": query}, 
-                timeout=30
-            )
+            r = self.session.post(self.SPARQL_ENDPOINT, data={"query": query}, timeout=30)
             r.raise_for_status()
             return r.json()
         except Exception as e:
             print(f"Chyba při dotazu SPARQL: {e}")
             return {}
-    
-    def count_datasets(self) -> int:
-        """Spočítá celkový počet datasetů"""
+
+    def count_datasets(self):
         query = """
         PREFIX dcat: <http://www.w3.org/ns/dcat#>
         SELECT (COUNT(DISTINCT ?dataset) AS ?count) WHERE {
@@ -76,31 +45,33 @@ class DataFetchNode:
             return int(result["results"]["bindings"][0]["count"]["value"])
         except:
             return 0
-    
-    def count_hvd_datasets(self) -> int:
+
+    def count_hvd_datasets(self):
         """Spočítá počet HVD datových sad"""
-        query = """
+        query = f"""
         PREFIX dcat: <http://www.w3.org/ns/dcat#>
         PREFIX dcatap: <http://data.europa.eu/r5r/>
-        SELECT (COUNT(DISTINCT ?dataset) AS ?count) WHERE {
+        SELECT (COUNT(DISTINCT ?dataset) AS ?count) WHERE {{
           ?dataset a dcat:Dataset .
           ?dataset dcatap:hvdCategory ?hvdCategory .
-        }
+        }}
         """
         result = self.sparql_query(query)
         try:
             return int(result["results"]["bindings"][0]["count"]["value"])
         except:
             return 0
-    
-    def list_datasets(self, limit: int = None) -> List[str]:
-        """Získá seznam URI datasetů"""
-        if limit is None:
-            query = """
+
+    def list_datasets(self, limit=None):
+        actual_limit = limit if limit is not None else self.limit
+        
+        if actual_limit is None:
+            # Neomezený počet - stáhne všechna data
+            query = f"""
             PREFIX dcat: <http://www.w3.org/ns/dcat#>
-            SELECT DISTINCT ?dataset WHERE {
+            SELECT DISTINCT ?dataset WHERE {{
               ?dataset a dcat:Dataset .
-            }
+            }}
             ORDER BY ?dataset
             """
         else:
@@ -110,9 +81,8 @@ class DataFetchNode:
               ?dataset a dcat:Dataset .
             }}
             ORDER BY ?dataset
-            LIMIT {limit}
+            LIMIT {actual_limit}
             """
-        
         result = self.sparql_query(query)
         datasets = []
         try:
@@ -121,72 +91,21 @@ class DataFetchNode:
         except:
             pass
         return datasets
-    
-    def __call__(self, state: NKODState) -> NKODState:
-        """Spustí stahování základních informací"""
-        # Inicializace výstupních adresářů
-        os.makedirs(self.config.output_dir, exist_ok=True)
-        os.makedirs(f"{self.config.output_dir}/datasets", exist_ok=True)
-        os.makedirs(f"{self.config.output_dir}/hvd", exist_ok=True)
-        
-        # Spočítá datasety
-        total_count = self.count_datasets()
-        hvd_count = self.count_hvd_datasets()
-        
-        # Získá seznam datasetů
-        datasets = self.list_datasets(self.config.limit)
-        
-        # Aktualizuje stav
-        state.update({
-            "sparql_endpoint": self.config.sparql_endpoint,
-            "session_headers": dict(self.session.headers),
-            "output_dir": self.config.output_dir,
-            "datasets": datasets,
-            "total_count": total_count,
-            "hvd_count": hvd_count,
-            "limit": self.config.limit or total_count
-        })
-        
-        return state
 
-
-class MetadataParseNode:
-    """Uzel pro parsování metadat jednotlivých datasetů"""
-    
-    def __init__(self, config: NKODConfig):
-        self.config = config
-        self.session = requests.Session()
-        self.session.headers.update({
-            "User-Agent": "NKOD-Scraper/2.1-HVD-LangChain",
-            "Accept": "application/sparql-results+json"
-        })
-    
-    def sparql_query(self, query: str) -> Dict[str, Any]:
-        """Vykoná SPARQL dotaz"""
-        try:
-            r = self.session.post(
-                self.config.sparql_endpoint, 
-                data={"query": query}, 
-                timeout=30
-            )
-            r.raise_for_status()
-            return r.json()
-        except Exception as e:
-            print(f"Chyba při dotazu SPARQL: {e}")
-            return {}
-    
-    def is_hvd_dataset(self, metadata: Dict[str, Any]) -> bool:
+    def is_hvd_dataset(self, metadata):
         """Kontroluje zda je datová sada HVD na základě metadat"""
+        # Kontrola přítomnosti HVD kategorie
         if metadata.get("hvdCategory"):
             return True
         
+        # Kontrola přítomnosti HVD legislativy
         applicable_legislation = metadata.get("applicableLegislation", [])
         if isinstance(applicable_legislation, str):
             applicable_legislation = [applicable_legislation]
         
-        return self.config.hvd_legislation_uri in applicable_legislation
-    
-    def get_comprehensive_metadata(self, dataset_uri: str) -> Dict[str, Any]:
+        return self.HVD_LEGISLATION_URI in applicable_legislation
+
+    def get_comprehensive_metadata(self, dataset_uri):
         """Stáhne kompletní metadata podle DCAT-AP-CZ specifikace včetně HVD položek"""
         query = f"""
         PREFIX dcat: <http://www.w3.org/ns/dcat#>
@@ -267,13 +186,9 @@ class MetadataParseNode:
         # Označíme zda je to HVD dataset
         metadata["isHVD"] = self.is_hvd_dataset(metadata)
         
-        # Přidáme timestamp a verzi
-        metadata["harvested_at"] = datetime.now().isoformat()
-        metadata["scraper_version"] = "2.1-HVD-LangChain"
-        
         return metadata
-    
-    def get_distributions(self, dataset_uri: str) -> List[Dict[str, Any]]:
+
+    def get_distributions(self, dataset_uri):
         """Získá seznam distribucí pro datovou sadu včetně HVD informací"""
         query = f"""
         PREFIX dcat: <http://www.w3.org/ns/dcat#>
@@ -301,71 +216,53 @@ class MetadataParseNode:
             distributions.append(dist)
             
         return distributions
-    
-    def __call__(self, state: NKODState) -> NKODState:
-        """Zpracuje metadata pro všechny datasety"""
-        processed_datasets = []
-        
-        for i, dataset_uri in enumerate(state["datasets"], 1):
-            try:
-                print(f"Parsování {i}/{len(state['datasets'])}: ", end="", flush=True)
-                metadata = self.get_comprehensive_metadata(dataset_uri)
-                processed_datasets.append(metadata)
-                
-                hvd_marker = " [HVD]" if metadata.get("isHVD") else ""
-                title = metadata.get("title", "Bez názvu")[:50]
-                print(f"{title}{hvd_marker}")
-                
-            except Exception as e:
-                print(f"CHYBA při {dataset_uri}: {e}")
-                continue
-        
-        state["processed_datasets"] = processed_datasets
-        return state
 
-
-class OutputNode:
-    """Uzel pro výstup dat do souborů a generování statistik"""
-    
-    def __init__(self, config: NKODConfig):
-        self.config = config
-    
-    def create_filename_from_metadata(self, metadata: Dict[str, Any]) -> str:
+    def create_filename_from_metadata(self, metadata):
         """Vytvoří název souboru na základě metadat s prefixem pro HVD"""
         def clean_filename(text):
+            # Odstraní diakritiku a nepovolené znaky
             text = re.sub(r'[<>:"/\\|?*]', '', text)
             text = re.sub(r'\s+', '_', text.strip())
-            return text[:100]
+            return text[:100]  # Omezí délku na 100 znaků
         
+        # Prefix pro HVD datasety
         prefix = "HVD_" if metadata.get("isHVD") else ""
         
+        # Pokusíme se najít vhodný název v tomto pořadí:
+        # 1. Oficiální identifikátor
         if metadata.get("identifier"):
             return prefix + clean_filename(metadata["identifier"]) + ".json"
         
+        # 2. Název datové sady
         if metadata.get("title"):
             return prefix + clean_filename(metadata["title"]) + ".json"
         
+        # 3. První klíčové slovo + téma
         if metadata.get("keywords") and metadata.get("themes"):
             keyword = metadata["keywords"][0] if metadata["keywords"] else ""
             theme = self.extract_theme_name(metadata["themes"][0]) if metadata["themes"] else ""
             if keyword and theme:
                 return prefix + clean_filename(f"{keyword}_{theme}") + ".json"
         
+        # 4. Jen klíčové slovo
         if metadata.get("keywords"):
             return prefix + clean_filename(metadata["keywords"][0]) + ".json"
         
+        # 5. Název tématu
         if metadata.get("themes"):
             theme_name = self.extract_theme_name(metadata["themes"][0])
             if theme_name:
                 return prefix + clean_filename(theme_name) + ".json"
         
+        # 6. Záložní řešení - použije část URI
         uri_parts = metadata["uri"].rstrip("/").split("/")
         if len(uri_parts) > 1:
             return prefix + clean_filename(uri_parts[-1]) + ".json"
         
+        # 7. Poslední záložní řešení
         return f"{prefix}dataset_{hash(metadata['uri']) % 10000}.json"
-    
-    def extract_theme_name(self, theme_uri: str) -> str:
+
+    def extract_theme_name(self, theme_uri):
         """Extrahuje název tématu z URI"""
         if "data-theme" in theme_uri:
             return theme_uri.split("/")[-1].upper()
@@ -375,26 +272,39 @@ class OutputNode:
             return f"hvd_{theme_uri.split('/')[-1]}"
         else:
             return theme_uri.split("/")[-1]
-    
-    def save_metadata(self, metadata: Dict[str, Any]) -> str:
+
+    def save_metadata(self, metadata):
         """Uloží metadata s inteligentním pojmenováním souboru do správné složky"""
         filename = self.create_filename_from_metadata(metadata)
         
+        # Určí správnou složku podle typu datasetu
         if metadata.get("isHVD"):
-            path = os.path.join(self.config.output_dir, "hvd", filename)
+            path = os.path.join(self.OUTPUT_DIR, "hvd", filename)
         else:
-            path = os.path.join(self.config.output_dir, "datasets", filename)
+            path = os.path.join(self.OUTPUT_DIR, "datasets", filename)
+        
+        # Přidáme timestamp pro snadné sledování
+        metadata["harvested_at"] = datetime.now().isoformat()
+        metadata["scraper_version"] = "2.1-HVD"
         
         with open(path, "w", encoding="utf-8") as f:
             json.dump(metadata, f, ensure_ascii=False, indent=2)
         
         return filename
-    
-    def generate_statistics(self, processed_datasets: List[Dict[str, Any]]) -> Dict[str, Any]:
-        """Generuje statistiky o zpracovaných datech"""
+
+    def print_statistics(self, processed_datasets):
+        """Vypíše statistiky o stažených datech včetně HVD informací"""
+        print(f"\n=== STATISTIKY STAHOVÁNÍ ===")
+        print(f"Celkem zpracováno datových sad: {len(processed_datasets)}")
+        
+        # Rozdělí datasety podle typu
         hvd_datasets = [d for d in processed_datasets if d.get("isHVD")]
         regular_datasets = [d for d in processed_datasets if not d.get("isHVD")]
         
+        print(f"HVD datových sad: {len(hvd_datasets)}")
+        print(f"Běžných datových sad: {len(regular_datasets)}")
+        
+        # Statistiky podle témat
         themes = {}
         publishers = {}
         hvd_categories = {}
@@ -414,121 +324,128 @@ class OutputNode:
                 hvd_cat = self.extract_theme_name(metadata["hvdCategory"])
                 hvd_categories[hvd_cat] = hvd_categories.get(hvd_cat, 0) + 1
         
-        return {
-            "total_processed": len(processed_datasets),
-            "hvd_count": len(hvd_datasets),
-            "regular_count": len(regular_datasets),
-            "themes": themes,
-            "publishers": publishers,
-            "hvd_categories": hvd_categories
-        }
-    
-    def print_statistics(self, statistics: Dict[str, Any]):
-        """Vypíše statistiky"""
-        print(f"\n=== STATISTIKY STAHOVÁNÍ ===")
-        print(f"Celkem zpracováno datových sad: {statistics['total_processed']}")
-        print(f"HVD datových sad: {statistics['hvd_count']}")
-        print(f"Běžných datových sad: {statistics['regular_count']}")
-        
-        if statistics["themes"]:
+        if themes:
             print(f"\nNejčastější témata:")
-            for theme, count in sorted(statistics["themes"].items(), key=lambda x: x[1], reverse=True)[:5]:
+            for theme, count in sorted(themes.items(), key=lambda x: x[1], reverse=True)[:5]:
                 print(f"  {theme}: {count}")
         
-        if statistics["publishers"]:
+        if publishers:
             print(f"\nNejčastější poskytovatelé:")
-            for publisher, count in sorted(statistics["publishers"].items(), key=lambda x: x[1], reverse=True)[:5]:
+            for publisher, count in sorted(publishers.items(), key=lambda x: x[1], reverse=True)[:5]:
                 publisher_name = publisher.split("/")[-1] if "/" in publisher else publisher
                 print(f"  {publisher_name}: {count}")
         
-        if statistics["hvd_categories"]:
+        if hvd_categories:
             print(f"\nHVD kategorie:")
-            for category, count in sorted(statistics["hvd_categories"].items(), key=lambda x: x[1], reverse=True):
+            for category, count in sorted(hvd_categories.items(), key=lambda x: x[1], reverse=True):
                 print(f"  {category}: {count}")
-    
-    def __call__(self, state: NKODState) -> NKODState:
-        """Uloží data a vygeneruje statistiky"""
-        saved_files = []
+
+    def run(self):
+        total_count = self.count_datasets()
+        hvd_count = self.count_hvd_datasets()
         
-        for metadata in state["processed_datasets"]:
+        if self.limit is None:
+            actual_limit = total_count
+            limit_text = "všechna data"
+        else:
+            actual_limit = min(self.limit, total_count)
+            limit_text = f"{actual_limit} datových sad"
+        
+        print(f"Celkový počet datových sad v NKOD: {total_count}")
+        print(f"Celkový počet HVD datových sad: {hvd_count}")
+        print(f"Stáhnu: {limit_text}")
+        print(f"Výstupní adresář: {self.OUTPUT_DIR}")
+        print(f"  - Běžné datasety: {self.OUTPUT_DIR}/datasets/")
+        print(f"  - HVD datasety: {self.OUTPUT_DIR}/hvd/")
+        print()
+        
+        datasets = self.list_datasets(self.limit)
+        processed_datasets = []
+        hvd_counter = 0
+        
+        for i, ds in enumerate(datasets, 1):
             try:
+                print(f"Stažení {i}/{len(datasets)}: ", end="", flush=True)
+                metadata = self.get_comprehensive_metadata(ds)
                 filename = self.save_metadata(metadata)
-                saved_files.append(filename)
+                processed_datasets.append(metadata)
+                
+                if metadata.get("isHVD"):
+                    hvd_counter += 1
+                    hvd_marker = " [HVD]"
+                else:
+                    hvd_marker = ""
+                
+                # Zobrazí název datové sady pokud je k dispozici
+                title = metadata.get("title", "Bez názvu")[:50]
+                print(f"{title}{hvd_marker} -> {filename}")
+                
             except Exception as e:
-                print(f"Chyba při ukládání {metadata.get('uri', 'unknown')}: {e}")
+                print(f"CHYBA při {ds}: {e}")
+                continue
         
-        # Vygeneruje statistiky
-        statistics = self.generate_statistics(state["processed_datasets"])
-        self.print_statistics(statistics)
+        print(f"\nPřehled zpracování:")
+        print(f"  Staženo celkem: {len(processed_datasets)} datových sad")
+        print(f"  HVD datových sad: {hvd_counter}")
+        print(f"  Běžných datových sad: {len(processed_datasets) - hvd_counter}")
         
+        self.print_statistics(processed_datasets)
         print(f"\nStahování dokončeno. Soubory uloženy v:")
-        print(f"  - Běžné datasety: {self.config.output_dir}/datasets/")
-        print(f"  - HVD datasety: {self.config.output_dir}/hvd/")
+        print(f"  - Běžné datasety: {self.OUTPUT_DIR}/datasets/")
+        print(f"  - HVD datasety: {self.OUTPUT_DIR}/hvd/")
+
+def main():
+    if len(sys.argv) > 1:
+        command = sys.argv[1].lower()
         
-        state["statistics"] = statistics
-        return state
-
-
-# Pomocné funkce pro vytvoření workflow
-def create_nkod_workflow(config: NKODConfig = None):
-    """Vytvoří LangGraph workflow pro NKOD scraping"""
-    if config is None:
-        config = NKODConfig()
+        if command == "data":
+            # Zobrazí počet datových sad včetně HVD
+            scraper = NKODScraper()
+            total_count = scraper.count_datasets()
+            hvd_count = scraper.count_hvd_datasets()
+            print(f"Počet datových sad v NKOD: {total_count}")
+            print(f"Počet HVD datových sad: {hvd_count}")
+            print(f"Počet běžných datových sad: {total_count - hvd_count}")
+            sys.exit(0)
+        
+        elif command == "help" or command == "--help":
+            print("NKOD Scraper - Enhanced version 2.1 s podporou HVD")
+            print("Použití:")
+            print("  python nkod_scraper.py                 # Stáhne VŠECHNA dostupná data")
+            print("  python nkod_scraper.py <počet>         # Stáhne zadaný počet datových sad")
+            print("  python nkod_scraper.py data            # Jen zobrazí celkový počet včetně HVD")
+            print("  python nkod_scraper.py help            # Zobrazí tuto nápovědu")
+            print()
+            print("Funkce:")
+            print("  - Automatické rozpoznání HVD datových sad")
+            print("  - Ukládání HVD do složky nkod_data/hvd/")
+            print("  - Ukládání běžných datových sad do nkod_data/datasets/")
+            print("  - Inteligentní pojmenovávání souborů s HVD_ prefixem")
+            print("  - Rozšířené statistiky o HVD kategoriích")
+            print()
+            print("HVD datasety jsou rozpoznány podle:")
+            print("  - Přítomnosti dcatap:hvdCategory")
+            print("  - Přítomnosti dcatap:applicableLegislation s HVD nařízením")
+            sys.exit(0)
+        
+        else:
+            # Pokusíme se interpretovat jako číslo
+            try:
+                limit = int(command)
+                if limit <= 0:
+                    print("Počet datových sad musí být kladné číslo")
+                    sys.exit(1)
+                scraper = NKODScraper(limit=limit)
+            except ValueError:
+                print(f"Neplatný argument: {command}")
+                print("Použijte 'python nkod_scraper.py help' pro nápovědu")
+                sys.exit(1)
+    else:
+        # Výchozí chování - stáhne VŠECHNA dostupná data
+        scraper = NKODScraper()
     
-    # Vytvoří uzly
-    fetch_node = DataFetchNode(config)
-    parse_node = MetadataParseNode(config)
-    output_node = OutputNode(config)
-    
-    return {
-        "data_fetch": fetch_node,
-        "metadata_parse": parse_node,
-        "output": output_node
-    }
-
-
-def run_nkod_workflow(limit: int = None):
-    """Spustí kompletní NKOD workflow"""
-    config = NKODConfig(limit=limit)
-    nodes = create_nkod_workflow(config)
-    
-    # Inicializační stav
-    state = NKODState(
-        sparql_endpoint="",
-        session_headers={},
-        output_dir="",
-        datasets=[],
-        processed_datasets=[],
-        statistics={},
-        limit=limit or 0,
-        total_count=0,
-        hvd_count=0
-    )
-    
-    print(f"Spouštím NKOD scraping workflow...")
-    
-    # Spustí uzly postupně
-    state = nodes["data_fetch"](state)
-    print(f"Nalezeno {len(state['datasets'])} datasetů k zpracování")
-    
-    state = nodes["metadata_parse"](state)
-    print(f"Zpracováno {len(state['processed_datasets'])} datasetů")
-    
-    state = nodes["output"](state)
-    
-    return state
-
+    # Spuštění stahování
+    scraper.run()
 
 if __name__ == "__main__":
-    # Příklad použití
-    import sys
-    
-    limit = None
-    if len(sys.argv) > 1:
-        try:
-            limit = int(sys.argv[1])
-        except ValueError:
-            print("Použití: python nkod_langchain_nodes.py [počet_datasetů]")
-            sys.exit(1)
-    
-    run_nkod_workflow(limit)
+    main()

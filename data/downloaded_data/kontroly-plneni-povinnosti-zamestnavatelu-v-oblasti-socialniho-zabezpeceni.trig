@@ -1,0 +1,122 @@
+
+<https://data.cssz.cz/resource/dataset/kontroly-plneni-povinnosti-zamestnavatelu-v-oblasti-socialniho-zabezpeceni> {
+  <https://data.cssz.cz/resource/observation/kontroly-plneni-povinnosti-zamestnavatelu-v-oblasti-socialniho-zabezpeceni/2009/pocet-kontrol>
+    a <http://purl.org/linked-data/cube#Observation>;
+    <http://purl.org/linked-data/cube#dataSet> <https://data.cssz.cz/resource/dataset/kontroly-plneni-povinnosti-zamestnavatelu-v-oblasti-socialniho-zabezpeceni>;
+    <https://data.cssz.cz/ontology/dimension/rok> <https://data.cssz.cz/resource/reference.data.gov.uk/id/gregorian-year/2009>;
+    <https://data.cssz.cz/ontology/measure/pocet-kontrol> 136556 .
+  
+  <https://data.cssz.cz/resource/observation/kontroly-plneni-povinnosti-zamestnavatelu-v-oblasti-socialniho-zabezpeceni/2010/pocet-kontrol>
+    a <http://purl.org/linked-data/cube#Observation>;
+    <http://purl.org/linked-data/cube#dataSet> <https://data.cssz.cz/resource/dataset/kontroly-plneni-povinnosti-zamestnavatelu-v-oblasti-socialniho-zabezpeceni>;
+    <https://data.cssz.cz/ontology/dimension/rok> <https://data.cssz.cz/resource/reference.data.gov.uk/id/gregorian-year/2010>;
+    <https://data.cssz.cz/ontology/measure/pocet-kontrol> 131628 .
+  
+  <https://data.cssz.cz/resource/observation/kontroly-plneni-povinnosti-zamestnavatelu-v-oblasti-socialniho-zabezpeceni/2011/pocet-kontrol>
+    a <http://purl.org/linked-data/cube#Observation>;
+    <http://purl.org/linked-data/cube#dataSet> <https://data.cssz.cz/resource/dataset/kontroly-plneni-povinnosti-zamestnavatelu-v-oblasti-socialniho-zabezpeceni>;
+    <https://data.cssz.cz/ontology/dimension/rok> <https://data.cssz.cz/resource/reference.data.gov.uk/id/gregorian-year/2011>;
+    <https://data.cssz.cz/ontology/measure/pocet-kontrol> 106268 .
+  
+  <https://data.cssz.cz/resource/observation/kontroly-plneni-povinnosti-zamestnavatelu-v-oblasti-socialniho-zabezpeceni/2012/pocet-kontrol>
+    a <http://purl.org/linked-data/cube#Observation>;
+    <http://purl.org/linked-data/cube#dataSet> <https://data.cssz.cz/resource/dataset/kontroly-plneni-povinnosti-zamestnavatelu-v-oblasti-socialniho-zabezpeceni>;
+    <https://data.cssz.cz/ontology/dimension/rok> <https://data.cssz.cz/resource/reference.data.gov.uk/id/gregorian-year/2012>;
+    <https://data.cssz.cz/ontology/measure/pocet-kontrol> 115398 .
+  
+  <https://data.cssz.cz/resource/observation/kontroly-plneni-povinnosti-zamestnavatelu-v-oblasti-socialniho-zabezpeceni/2013/pocet-kontrol>
+    a <http://purl.org/linked-data/cube#Observation>;
+    <http://purl.org/linked-data/cube#dataSet> <https://data.cssz.cz/resource/dataset/kontroly-plneni-povinnosti-zamestnavatelu-v-oblasti-socialniho-zabezpeceni>;
+    <https://data.cssz.cz/ontology/dimension/rok> <https://data.cssz.cz/resource/reference.data.gov.uk/id/gregorian-year/2013>;
+    <https://data.cssz.cz/ontology/measure/pocet-kontrol> 114766 .
+  
+  <https://data.cssz.cz/resource/observation/kontroly-plneni-povinnosti-zamestnavatelu-v-oblasti-socialniho-zabezpeceni/2014/pocet-kontrol>
+    a <http://purl.org/linked-data/cube#Observation>;
+    <http://purl.org/linked-data/cube#dataSet> <https://data.cssz.cz/resource/dataset/kontroly-plneni-povinnosti-zamestnavatelu-v-oblasti-socialniho-zabezpeceni>;
+    <https://data.cssz.cz/ontology/dimension/rok> <https://data.cssz.cz/resource/reference.data.gov.uk/id/gregorian-year/2014>;
+    <https://data.cssz.cz/ontology/measure/pocet-kontrol> 106104 .
+  
+  <https://data.cssz.cz/resource/observation/kontroly-plneni-povinnosti-zamestnavatelu-v-oblasti-socialniho-zabezpeceni/2015/pocet-kontrol>
+    a <http://purl.org/linked-data/cube#Observation>;
+    <http://purl.org/linked-data/cube#dataSet> <https://data.cssz.cz/resource/dataset/kontroly-plneni-povinnosti-zamestnavatelu-v-oblasti-socialniho-zabezpeceni>;
+    <https://data.cssz.cz/ontology/dimension/rok> <https://data.cssz.cz/resource/reference.data.gov.uk/id/gregorian-year/2015>;
+    <https://data.cssz.cz/ontology/measure/pocet-kontrol> 106958 .
+  
+  <https://data.cssz.cz/resource/observation/kontroly-plneni-povinnosti-zamestnavatelu-v-oblasti-socialniho-zabezpeceni/2016/pocet-kontrol>
+    a <http://purl.org/linked-data/cube#Observation>;
+    <http://purl.org/linked-data/cube#dataSet> <https://data.cssz.cz/resource/dataset/kontroly-plneni-povinnosti-zamestnavatelu-v-oblasti-socialniho-zabezpeceni>;
+    <https://data.cssz.cz/ontology/dimension/rok> <https://data.cssz.cz/resource/reference.data.gov.uk/id/gregorian-year/2016>;
+    <https://data.cssz.cz/ontology/measure/pocet-kontrol> 105935 .
+  
+  <https://data.cssz.cz/resource/observation/kontroly-plneni-povinnosti-zamestnavatelu-v-oblasti-socialniho-zabezpeceni/2017/pocet-kontrol>
+    a <http://purl.org/linked-data/cube#Observation>;
+    <http://purl.org/linked-data/cube#dataSet> <https://data.cssz.cz/resource/dataset/kontroly-plneni-povinnosti-zamestnavatelu-v-oblasti-socialniho-zabezpeceni>;
+    <https://data.cssz.cz/ontology/dimension/rok> <https://data.cssz.cz/resource/reference.data.gov.uk/id/gregorian-year/2017>;
+    <https://data.cssz.cz/ontology/measure/pocet-kontrol> 102953 .
+  
+  <https://data.cssz.cz/resource/observation/kontroly-plneni-povinnosti-zamestnavatelu-v-oblasti-socialniho-zabezpeceni/2018/pocet-kontrol>
+    a <http://purl.org/linked-data/cube#Observation>;
+    <http://purl.org/linked-data/cube#dataSet> <https://data.cssz.cz/resource/dataset/kontroly-plneni-povinnosti-zamestnavatelu-v-oblasti-socialniho-zabezpeceni>;
+    <https://data.cssz.cz/ontology/dimension/rok> <https://data.cssz.cz/resource/reference.data.gov.uk/id/gregorian-year/2018>;
+    <https://data.cssz.cz/ontology/measure/pocet-kontrol> 98181 .
+  
+  <https://data.cssz.cz/resource/observation/kontroly-plneni-povinnosti-zamestnavatelu-v-oblasti-socialniho-zabezpeceni/2019/pocet-kontrol>
+    a <http://purl.org/linked-data/cube#Observation>;
+    <http://purl.org/linked-data/cube#dataSet> <https://data.cssz.cz/resource/dataset/kontroly-plneni-povinnosti-zamestnavatelu-v-oblasti-socialniho-zabezpeceni>;
+    <https://data.cssz.cz/ontology/dimension/rok> <https://data.cssz.cz/resource/reference.data.gov.uk/id/gregorian-year/2019>;
+    <https://data.cssz.cz/ontology/measure/pocet-kontrol> 100076 .
+  
+  <https://data.cssz.cz/resource/observation/kontroly-plneni-povinnosti-zamestnavatelu-v-oblasti-socialniho-zabezpeceni/2020/pocet-kontrol>
+    a <http://purl.org/linked-data/cube#Observation>;
+    <http://purl.org/linked-data/cube#dataSet> <https://data.cssz.cz/resource/dataset/kontroly-plneni-povinnosti-zamestnavatelu-v-oblasti-socialniho-zabezpeceni>;
+    <https://data.cssz.cz/ontology/dimension/rok> <https://data.cssz.cz/resource/reference.data.gov.uk/id/gregorian-year/2020>;
+    <https://data.cssz.cz/ontology/measure/pocet-kontrol> 52844 .
+  
+  <https://data.cssz.cz/resource/observation/kontroly-plneni-povinnosti-zamestnavatelu-v-oblasti-socialniho-zabezpeceni/2021/pocet-kontrol>
+    a <http://purl.org/linked-data/cube#Observation>;
+    <http://purl.org/linked-data/cube#dataSet> <https://data.cssz.cz/resource/dataset/kontroly-plneni-povinnosti-zamestnavatelu-v-oblasti-socialniho-zabezpeceni>;
+    <https://data.cssz.cz/ontology/dimension/rok> <https://data.cssz.cz/resource/reference.data.gov.uk/id/gregorian-year/2021>;
+    <https://data.cssz.cz/ontology/measure/pocet-kontrol> 50359 .
+  
+  <https://data.cssz.cz/resource/observation/kontroly-plneni-povinnosti-zamestnavatelu-v-oblasti-socialniho-zabezpeceni/2022/pocet-kontrol>
+    a <http://purl.org/linked-data/cube#Observation>;
+    <http://purl.org/linked-data/cube#dataSet> <https://data.cssz.cz/resource/dataset/kontroly-plneni-povinnosti-zamestnavatelu-v-oblasti-socialniho-zabezpeceni>;
+    <https://data.cssz.cz/ontology/dimension/rok> <https://data.cssz.cz/resource/reference.data.gov.uk/id/gregorian-year/2022>;
+    <https://data.cssz.cz/ontology/measure/pocet-kontrol> 63547 .
+  
+  <https://data.cssz.cz/resource/observation/kontroly-plneni-povinnosti-zamestnavatelu-v-oblasti-socialniho-zabezpeceni/2023/pocet-kontrol>
+    a <http://purl.org/linked-data/cube#Observation>;
+    <http://purl.org/linked-data/cube#dataSet> <https://data.cssz.cz/resource/dataset/kontroly-plneni-povinnosti-zamestnavatelu-v-oblasti-socialniho-zabezpeceni>;
+    <https://data.cssz.cz/ontology/dimension/rok> <https://data.cssz.cz/resource/reference.data.gov.uk/id/gregorian-year/2023>;
+    <https://data.cssz.cz/ontology/measure/pocet-kontrol> 50518 .
+  
+  <https://data.cssz.cz/resource/observation/kontroly-plneni-povinnosti-zamestnavatelu-v-oblasti-socialniho-zabezpeceni/2024/pocet-kontrol>
+    a <http://purl.org/linked-data/cube#Observation>;
+    <http://purl.org/linked-data/cube#dataSet> <https://data.cssz.cz/resource/dataset/kontroly-plneni-povinnosti-zamestnavatelu-v-oblasti-socialniho-zabezpeceni>;
+    <https://data.cssz.cz/ontology/dimension/rok> <https://data.cssz.cz/resource/reference.data.gov.uk/id/gregorian-year/2024>;
+    <https://data.cssz.cz/ontology/measure/pocet-kontrol> 54429 .
+  
+  <https://data.cssz.cz/resource/dataset/kontroly-plneni-povinnosti-zamestnavatelu-v-oblasti-socialniho-zabezpeceni>
+    a <http://purl.org/linked-data/cube#DataSet>;
+    <http://purl.org/dc/terms/title> "Kontroly plnění povinností zaměstnavatelů v oblasti sociálního zabezpečení"@cs;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Kontroly plnění povinností zaměstnavatelů v oblasti sociálního zabezpečení"@cs;
+    <http://purl.org/dc/terms/description> "Statistika kontrol plnění povinností zaměstnavatelů v oblasti sociálního zabezpečení od roku 2009"@cs;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "Statistika kontrol plnění povinností zaměstnavatelů v oblasti sociálního zabezpečení od roku 2009"@cs;
+    <http://purl.org/dc/terms/publisher> <http://www.cssz.cz>;
+    <http://purl.org/linked-data/cube#structure> <https://data.cssz.cz/resource/data-structure-definition/kontroly-plneni-povinnosti-zamestnavatelu-v-oblasti-socialniho-zabezpeceni> .
+  
+  <https://data.cssz.cz/resource/data-structure-definition/kontroly-plneni-povinnosti-zamestnavatelu-v-oblasti-socialniho-zabezpeceni>
+    a <http://purl.org/linked-data/cube#DataStructureDefinition>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Definice struktury datové kostky Kontroly plnění povinností zaměstnavatelů v oblasti sociálního zabezpečení"@cs;
+    <http://purl.org/linked-data/cube#component> _:node1ikjpsnoax732 .
+  
+  _:node1ikjpsnoax732 <http://purl.org/linked-data/cube#dimension> <https://data.cssz.cz/ontology/dimension/rok>;
+    <http://purl.org/linked-data/cube#order> 1;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Rok"@cs .
+  
+  <https://data.cssz.cz/resource/data-structure-definition/kontroly-plneni-povinnosti-zamestnavatelu-v-oblasti-socialniho-zabezpeceni>
+    <http://purl.org/linked-data/cube#component> _:node1ikjpsnoax733 .
+  
+  _:node1ikjpsnoax733 <http://purl.org/linked-data/cube#measure> <https://data.cssz.cz/ontology/measure/pocet-kontrol>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Počet kontrol"@cs .
+}
